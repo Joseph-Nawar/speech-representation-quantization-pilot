@@ -1,0 +1,3684 @@
+{
+  "G0": "UNVERIFIED",
+  "G5": "OPEN",
+  "all_parameters": [
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "masked_spec_embed",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 5120,
+      "path": "feature_extractor.conv_layers.0.conv.weight",
+      "shape": [
+        512,
+        1,
+        10
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "feature_extractor.conv_layers.0.layer_norm.weight",
+      "shape": [
+        512
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "feature_extractor.conv_layers.0.layer_norm.bias",
+      "shape": [
+        512
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 786432,
+      "path": "feature_extractor.conv_layers.1.conv.weight",
+      "shape": [
+        512,
+        512,
+        3
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 786432,
+      "path": "feature_extractor.conv_layers.2.conv.weight",
+      "shape": [
+        512,
+        512,
+        3
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 786432,
+      "path": "feature_extractor.conv_layers.3.conv.weight",
+      "shape": [
+        512,
+        512,
+        3
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 786432,
+      "path": "feature_extractor.conv_layers.4.conv.weight",
+      "shape": [
+        512,
+        512,
+        3
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 524288,
+      "path": "feature_extractor.conv_layers.5.conv.weight",
+      "shape": [
+        512,
+        512,
+        2
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 524288,
+      "path": "feature_extractor.conv_layers.6.conv.weight",
+      "shape": [
+        512,
+        512,
+        2
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "feature_projection.layer_norm.weight",
+      "shape": [
+        512
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "feature_projection.layer_norm.bias",
+      "shape": [
+        512
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 393216,
+      "path": "feature_projection.projection.weight",
+      "shape": [
+        768,
+        512
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "feature_projection.projection.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.pos_conv_embed.conv.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 128,
+      "path": "encoder.pos_conv_embed.conv.parametrizations.weight.original0",
+      "shape": [
+        1,
+        1,
+        128
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 4718592,
+      "path": "encoder.pos_conv_embed.conv.parametrizations.weight.original1",
+      "shape": [
+        768,
+        48,
+        128
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.0.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.0.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.0.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3840,
+      "path": "encoder.layers.0.attention.rel_attn_embed.weight",
+      "shape": [
+        320,
+        12
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.0.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.0.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.0.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.0.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.1.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.1.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.1.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.1.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.1.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.1.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.1.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.2.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.2.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.2.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.2.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.2.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.2.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.2.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.3.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.3.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.3.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.3.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.3.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.3.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.3.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.4.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.4.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.4.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.4.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.4.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.4.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.4.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.5.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.5.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.5.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.5.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.5.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.5.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.5.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.6.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.6.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.6.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.6.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.6.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.6.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.6.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.7.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.7.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.7.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.7.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.7.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.7.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.7.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.8.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.8.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.8.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.8.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.8.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.8.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.8.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.9.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.9.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.9.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.9.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.9.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.9.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.9.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.10.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.10.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.10.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.10.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.10.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.10.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.10.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 12,
+      "path": "encoder.layers.11.attention.gru_rel_pos_const",
+      "shape": [
+        1,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.k_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.attention.k_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.v_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.attention.v_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.q_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.attention.q_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.out_proj.weight",
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.attention.out_proj.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 512,
+      "path": "encoder.layers.11.attention.gru_rel_pos_linear.weight",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 8,
+      "path": "encoder.layers.11.attention.gru_rel_pos_linear.bias",
+      "shape": [
+        8
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.layer_norm.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.11.feed_forward.intermediate_dense.weight",
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 3072,
+      "path": "encoder.layers.11.feed_forward.intermediate_dense.bias",
+      "shape": [
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 2359296,
+      "path": "encoder.layers.11.feed_forward.output_dense.weight",
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.feed_forward.output_dense.bias",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.final_layer_norm.weight",
+      "shape": [
+        768
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "parameters": 768,
+      "path": "encoder.layers.11.final_layer_norm.bias",
+      "shape": [
+        768
+      ]
+    }
+  ],
+  "audio_clips": 0,
+  "device": "cpu",
+  "inventory": [
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.0.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.0.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.0.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 1,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.0.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.1.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.1.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.1.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 2,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.1.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.2.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.2.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.2.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 3,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.2.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.3.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.3.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.3.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 4,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.3.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.4.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.4.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.4.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 5,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.4.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.5.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.5.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.5.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 6,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.5.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.6.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.6.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.6.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 7,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.6.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.7.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.7.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.7.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 8,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.7.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.8.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.8.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.8.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 9,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.8.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.9.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.9.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.9.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 10,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.9.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.10.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.10.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.10.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 11,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.10.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.q_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.k_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.v_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 313344,
+        "8": 608256
+      },
+      "dtype": "torch.float32",
+      "groups": 9216,
+      "parameters": 589824,
+      "path": "encoder.layers.11.attention.out_proj.weight",
+      "selected": true,
+      "shape": [
+        768,
+        768
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.11.feed_forward.intermediate_dense.weight",
+      "selected": true,
+      "shape": [
+        3072,
+        768
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": {
+        "4": 1253376,
+        "8": 2433024
+      },
+      "dtype": "torch.float32",
+      "groups": 36864,
+      "parameters": 2359296,
+      "path": "encoder.layers.11.feed_forward.output_dense.weight",
+      "selected": true,
+      "shape": [
+        768,
+        3072
+      ]
+    },
+    {
+      "block": 12,
+      "calculated_packed_bytes": null,
+      "dtype": "torch.float32",
+      "groups": 8,
+      "parameters": 512,
+      "path": "encoder.layers.11.attention.gru_rel_pos_linear.weight",
+      "selected": false,
+      "shape": [
+        8,
+        64
+      ]
+    }
+  ],
+  "model_budget_estimates": {
+    "fp16": {
+      "all4_bytes": 64016096,
+      "all8_bytes": 106483424,
+      "fixed_bytes": 18894560,
+      "fractions": {
+        "0.25": {
+          "achieved_max_bytes": 74632928,
+          "ceiling_bytes": 74632928,
+          "feasible_mappings": 299,
+          "prior_seven_linear_ceiling": 74624672
+        },
+        "0.5": {
+          "achieved_max_bytes": 85249760,
+          "ceiling_bytes": 85249760,
+          "feasible_mappings": 2510,
+          "prior_seven_linear_ceiling": 85242272
+        },
+        "0.75": {
+          "achieved_max_bytes": 95866592,
+          "ceiling_bytes": 95866592,
+          "feasible_mappings": 4017,
+          "prior_seven_linear_ceiling": 95859872
+        }
+      },
+      "per_block_bytes": [
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ]
+      ],
+      "prior_seven_linear_all4": 64007072,
+      "prior_seven_linear_all8": 106477472
+    },
+    "fp32": {
+      "all4_bytes": 82910656,
+      "all8_bytes": 125377984,
+      "fixed_bytes": 37789120,
+      "fractions": {
+        "0.25": {
+          "achieved_max_bytes": 93527488,
+          "ceiling_bytes": 93527488,
+          "feasible_mappings": 299,
+          "prior_seven_linear_ceiling": 93506944
+        },
+        "0.5": {
+          "achieved_max_bytes": 104144320,
+          "ceiling_bytes": 104144320,
+          "feasible_mappings": 2510,
+          "prior_seven_linear_ceiling": 104124544
+        },
+        "0.75": {
+          "achieved_max_bytes": 114761152,
+          "ceiling_bytes": 114761152,
+          "feasible_mappings": 4017,
+          "prior_seven_linear_ceiling": 114742144
+        }
+      },
+      "per_block_bytes": [
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ],
+        [
+          3760128,
+          7299072
+        ]
+      ],
+      "prior_seven_linear_all4": 82889344,
+      "prior_seven_linear_all8": 125359744
+    }
+  },
+  "model_forwards": 0,
+  "model_sha256": "f926654aa55d440f38f2d7b77334ab495dd7214543843c5139b183c810ac180a",
+  "p0_weight_perturbation": {
+    "4": {
+      "encoder.layers.0.attention.k_proj.weight": {
+        "changed": 588065,
+        "max_abs_error": 0.08538818359375,
+        "rmse": 0.00944831594824791
+      },
+      "encoder.layers.0.attention.out_proj.weight": {
+        "changed": 588047,
+        "max_abs_error": 0.07501220703125,
+        "rmse": 0.005012705456465483
+      },
+      "encoder.layers.0.attention.q_proj.weight": {
+        "changed": 588001,
+        "max_abs_error": 0.08428955078125,
+        "rmse": 0.009708862751722336
+      },
+      "encoder.layers.0.attention.v_proj.weight": {
+        "changed": 588024,
+        "max_abs_error": 0.054931640625,
+        "rmse": 0.005458048544824123
+      },
+      "encoder.layers.0.feed_forward.intermediate_dense.weight": {
+        "changed": 2352266,
+        "max_abs_error": 0.2919921875,
+        "rmse": 0.011944010853767395
+      },
+      "encoder.layers.0.feed_forward.output_dense.weight": {
+        "changed": 2352037,
+        "max_abs_error": 0.2139892578125,
+        "rmse": 0.011473851278424263
+      }
+    },
+    "8": {
+      "encoder.layers.0.attention.k_proj.weight": {
+        "changed": 588500,
+        "max_abs_error": 0.004730224609375,
+        "rmse": 0.0005212053074501455
+      },
+      "encoder.layers.0.attention.out_proj.weight": {
+        "changed": 588476,
+        "max_abs_error": 0.00417327880859375,
+        "rmse": 0.0002803108945954591
+      },
+      "encoder.layers.0.attention.q_proj.weight": {
+        "changed": 588536,
+        "max_abs_error": 0.004669189453125,
+        "rmse": 0.0005369100836105645
+      },
+      "encoder.layers.0.attention.v_proj.weight": {
+        "changed": 588500,
+        "max_abs_error": 0.003002166748046875,
+        "rmse": 0.0003010360524058342
+      },
+      "encoder.layers.0.feed_forward.intermediate_dense.weight": {
+        "changed": 2354035,
+        "max_abs_error": 0.015899658203125,
+        "rmse": 0.0006605684175156057
+      },
+      "encoder.layers.0.feed_forward.output_dense.weight": {
+        "changed": 2354010,
+        "max_abs_error": 0.0123291015625,
+        "rmse": 0.0006412033108063042
+      }
+    }
+  },
+  "peak_rss_bytes": 1203257344,
+  "provenance": {
+    "amendment": "Q-001",
+    "amendment_sha256": "1fa4ee8e2d9ff40d86429d2a85708422cdf3ca91c579a7d86f74f58f3ef04a2d",
+    "candidate_sha256": "40e06426c15179de44848609c68abfa83567a651097ff8a656c6f1c6c0c686ac",
+    "checkpoint_sha256": "3bb273a6ace99408b50cfc81afdbb7ef2de02da2eab0234e18db608ce692fe51",
+    "code_commit": "be4fdc264fe961315dd0bf3a119e0d38cbd4a2cd",
+    "config_sha256": "e7caee286965dc758ee0fca22b3bdd683910e4107fc060b7beedccd5aa301c9e",
+    "micro_plan_sha256": "96acdc2de333cbed9679062f9a6aa53e50d0b56a5d21c41123624593ca667e03",
+    "model_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "processor_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "protocol_version": 2,
+    "scope_sha256": "06f26cb2c13e07d9c31dfe99e9ae888760000e8f19c573e63de445ebecdd6dd1",
+    "software_sha256": "eccf8afed9221af7727e79f47289617312b6eb664a1dcb7ee4b3ca5074547075",
+    "study_id": "speech-quant-diagnostic-20261122-v2"
+  },
+  "status": "PASS",
+  "wall_seconds": 1.828
+}

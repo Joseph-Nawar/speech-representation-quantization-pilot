@@ -1,0 +1,91 @@
+--- v2/configs/pilot.yaml
++++ v3/configs/pilot.yaml
+@@ -1,8 +1,10 @@
+ # PRE-REGISTERED. Research changes require new study_id and documented amendment.
+-study_id: speech-quant-diagnostic-20261122-v2
+-protocol_version: 2
+-amendment: Q-001
+-prior_study_id: speech-quant-diagnostic-20261122-v1
++study_id: speech-quant-diagnostic-20261122-v3
++protocol_version: 3
++amendment: Q-002
++amendments: [Q-001, Q-002]
++parent_study_id: speech-quant-diagnostic-20261122-v2
++prior_study_id: speech-quant-diagnostic-20261122-v2
+ owner_review_required_before: [P2, P4]
+ data:
+   corpus: vctk_0.92
+@@ -59,10 +61,17 @@
+ analysis:
+   metric: macro_f1
+   primary_loss: worst_task_normalized_headroom_loss
+-  bootstrap_kind: two_way_speaker_and_prompt_cluster
++  bootstrap_kind: positive_weight_crossed_factor_multiplier
++  bootstrap_factor_distribution: {name: gamma, shape: 1.0, scale: 1.0}
++  bootstrap_cell_weight: speaker_weight_times_prompt_weight
++  bootstrap_factor_normalization: mean_one_per_replicate
+   bootstrap_repetitions: 2000
+   bootstrap_seed: 20261124
+   confidence_level: 0.95
++  bootstrap_interval: percentile
++  bootstrap_streams: [dev, test]
++  bootstrap_paired_conditions_share_weights: true
++  bootstrap_spec_sha256: 3e537fe0aebe21813c634d535e6e2760e1bcb8b3536569a513df94273ea52e05
+ gates:
+   G2_min_uniform4_drop_any_task: 0.03
+   G2_max_uniform8_drop_each_task: 0.05
+@@ -77,5 +86,9 @@
+ resources:
+   P1_max_audio_clips: 128
+   P1_max_selected_blocks: 4
++  P2_max_audio_cells: 1134
++  P2_max_audio_payload_bytes: 2147483648
++  P2_max_local_decoded_bytes: 4294967296
++  P2_min_free_disk_bytes: 5368709120
+   prohibit_full_corpus_download_without_owner_approval: true
+-  stage_stop_after: P1
++  stage_stop_after: P2
+--- v2/docs/01_protocol.md
++++ v3/docs/01_protocol.md
+@@ -2,7 +2,7 @@
+ 
+ ## Question and scope
+ 
+-Protocol version 2 applies [Q-001](amendments/Q001_SCOPE.md). The WavLM intervention covers six specified projection matrices per block.
++Protocol version 3 applies [Q-001](amendments/Q001_SCOPE.md) and [Q-002](amendments/Q002_BOOTSTRAP.md), and descends from study `speech-quant-diagnostic-20261122-v2`. Q-001 fixes the WavLM intervention at six specified projection matrices per block. Q-002 changes only the uncertainty resampling procedure; all hypotheses, tasks, data/split definitions, thresholds, metrics, quantization conditions, and primary budget are unchanged.
+ 
+ Under **one shared speech corpus, one frozen self-supervised encoder, one fixed audio preprocessing policy, and two frozen task-specific heads**, does 4/8-bit weight-only compression produce conflicting *layer-level* sensitivity for (A) spoken sentence/prompt classification and (B) closed-set speaker identification? If so, can simple existing cost-matched multi-task allocation policies already handle the conflict?
+ 
+--- v2/docs/04_analysis_and_gates.md
++++ v3/docs/04_analysis_and_gates.md
+@@ -9,11 +9,14 @@
+ - Top-4 most sensitive layer overlap; source of deterministic ties declared.
+ - Compare actual full-model mixed-precision policies at matched achieved encoded byte budgets (or use Pareto plot if mismatched).
+ 
+-## Uncertainty and sampling
+-- **Paired evaluation** uses exactly the same sample IDs across FP and quantization variants.
+-- For uncertainty, use **two-way cluster bootstrap** on the held-out speaker×prompt grid: resample speaker IDs with replacement and prompt IDs with replacement, combine cell multiplicities as weights, recalculate macro-F1, layer sensitivity and Spearman. If implementation is tricky, unit-test against a slow reference on tiny toy grids; never substitute ordinary iid clip bootstrap without disclosure.
+-- 2,000 bootstrap replicates, fixed seed 20261124; percentile 95% CI. Report both effect estimates and CIs; descriptive one-sided proportions for gates, no unsupported p-value claims.
+-- Check that all class labels remain defined within resamples; include all known classes with `zero_division=0` and flag sparse support.
++## Uncertainty and sampling (Q-002; protocol v3)
++- **Paired evaluation** uses exactly the same sample IDs across FP and quantization variants, and every paired condition uses the same cell weights in a given replicate.
++- Use positive-weight crossed-factor multiplier resampling on the observed speaker×prompt grid. In each replicate independently draw `a_s ~ Gamma(shape=1, scale=1)` for every speaker and `b_p ~ Gamma(shape=1, scale=1)` for every prompt, then weight each observed cell by `w_sp = a_s * b_p`. Normalize each factor's weights to mean 1 within the replicate if used; this common positive rescaling does not change F1.
++- Calculate weighted confusion counts and weighted per-class F1 over the fixed, complete label set. Every class with original true-label support must retain strictly positive weighted support in every replicate. Use `zero_division=0` only for a genuinely undefined precision/recall contribution; never omit a predefined class. Apply the same paired weights to score differences, rank correlations, and policy differences.
++- Generate deterministic named RNG substreams for each data partition from root seed 20261124 and SHA256-bound study ID, split hash, bootstrap specification hash, and partition name. Dev and test streams are distinct; test outcomes remain sealed until P4. No sequential optional stopping or seed shopping.
++- Use **2,000** replicates and percentile **95%** intervals. Report effect estimates and intervals; descriptive one-sided proportions for gates; no unsupported p-value claims.
++- This is an **approximate positive-weight multiway bootstrap**, inspired by Owen & Eckles (2012), not a proven exact 95% frequentist coverage procedure. It preserves the observed label classes but does not test generalization to held-out speakers or novel prompts. Report the bounded synthetic stability/coverage diagnostic and its limits; do not tune the interval to pilot outcomes.
++- Preserve a synthetic regression test of the prior multinomial deletion rule (perfect predictions scored below 1 when resampled classes disappear), alongside perfect-classifier, paired-zero, independent confusion-reference, support, and reproducibility checks. If a required invariant fails or the synthetic diagnostic leaves material validity doubts, stop before empirical P2 metrics with `BLOCKED_STATISTICS`.
+ - For multiple candidate budgets/contrasts, use a **single predeclared primary budget** `f=0.50`. Others are sensitivity checks, not independent significance opportunities. No choosing the most favorable budget post hoc.
+ - Primary test comparisons focus on `f=0.50`, `minimax` vs fixed dev-selected search diagnostic, and the isolated 4-bit sensitivities.
+ 
+--- v2/schemas/decision.json
++++ v3/schemas/decision.json
+@@ -1,5 +1,7 @@
+ {
+-  "study_id": "speech-quant-diagnostic-20261122-v1",
++  "study_id": "speech-quant-diagnostic-20261122-v3",
++  "protocol_version": 3,
++  "amendments": ["Q-001", "Q-002"],
+   "stage": "P4",
+   "immutable_lock_sha256": "REQUIRED_ON_P4",
+   "verdict": "BLOCKED_INVALID",

@@ -1,0 +1,9 @@
+# Third-party materials and attribution
+
+This repository references, but does not redistribute, the VCTK recordings or WavLM model weights.
+
+- **VCTK 0.92:** University of Edinburgh, *CSTR VCTK Corpus*, DOI [10.7488/ds/2645](https://doi.org/10.7488/ds/2645). The official release is marked [Creative Commons Attribution 4.0 International](https://datashare.ed.ac.uk/items/30e7453c-9ea8-48b4-8e18-f96d0dc62928/full). The tracked research manifests contain anonymized corpus IDs, split assignments, and cryptographic hashes; they do not include recordings or transcript text. The project performed selection and integrity checks on local copies. The dataset's own license and attribution terms continue to apply to anyone obtaining the corpus.
+- **WavLM Base Plus:** Microsoft, [official model card](https://huggingface.co/microsoft/wavlm-base-plus), pinned in this study to revision `4c66d4806a428f2e922ccfa1a962776e232d487b`. The card links to Microsoft's [UniSpeech license](https://github.com/microsoft/UniSpeech/blob/main/LICENSE) (CC BY-SA 3.0). Model weights and downloaded model files are not included here; the checkpoint SHA256 is recorded in the reports for provenance.
+- **Research literature:** summaries and citations in [`docs/05_literature_and_novelty.md`](docs/05_literature_and_novelty.md) and [`reports/P0_NOVELTY_MATRIX.md`](reports/P0_NOVELTY_MATRIX.md) are provided for scholarly attribution. The cited papers and their code are not redistributed.
+
+The project itself has no standalone license grant. Public visibility of this repository does not grant reuse rights in third-party materials, the dataset, model, or papers. Dependency names and observed versions are listed in [`requirements-p0-observed.txt`](requirements-p0-observed.txt); dependencies retain their respective licenses.

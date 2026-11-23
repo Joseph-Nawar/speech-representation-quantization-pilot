@@ -1,0 +1,80 @@
+diff --git a/configs/pilot.yaml b/configs/pilot.yaml
+index f092d1b..d8fb4e2 100644
+--- a/configs/pilot.yaml
++++ b/configs/pilot.yaml
+@@ -1,6 +1,8 @@
+ # PRE-REGISTERED. Research changes require new study_id and documented amendment.
+-study_id: speech-quant-diagnostic-20261122-v1
+-protocol_version: 1
++study_id: speech-quant-diagnostic-20261122-v2
++protocol_version: 2
++amendment: Q-001
++prior_study_id: speech-quant-diagnostic-20261122-v1
+ owner_review_required_before: [P2, P4]
+ data:
+   corpus: vctk_0.92
+@@ -23,8 +25,8 @@ data:
+   test_min_per_prompt: 5
+ model:
+   model_id: microsoft/wavlm-base-plus
+-  revision: PIN_ON_P0
+-  processor_revision: PIN_ON_P0
++  revision: 4c66d4806a428f2e922ccfa1a962776e232d487b
++  processor_revision: 4c66d4806a428f2e922ccfa1a962776e232d487b
+   expected_transformer_blocks: 12
+   reference_precision: fp16_or_documented_fp32_fallback
+   pooling: mask_aware_mean_of_last_four_hidden_layers
+@@ -37,7 +39,14 @@ probes:
+   heads_train_only_on_full_precision: true
+ quantization:
+   kind: symmetric_groupwise_weight_only_fake_quant
+-  eligible: transformer_encoder_block_linear_weights_only
++  eligible:
++    - attention.q_proj.weight
++    - attention.k_proj.weight
++    - attention.v_proj.weight
++    - attention.out_proj.weight
++    - feed_forward.intermediate_dense.weight
++    - feed_forward.output_dense.weight
++  excluded_block_linear: attention.gru_rel_pos_linear.weight
+   group_size: 64
+   bits: [4, 8]
+   scale_dtype: float16
+diff --git a/docs/01_protocol.md b/docs/01_protocol.md
+index 47c168f..a250879 100644
+--- a/docs/01_protocol.md
++++ b/docs/01_protocol.md
+@@ -1,6 +1,9 @@
+ # 01 — Scientific protocol (frozen before P2)
+ 
+ ## Question and scope
++
++Protocol version 2 applies [Q-001](amendments/Q001_SCOPE.md). The WavLM intervention covers six specified projection matrices per block.
++
+ Under **one shared speech corpus, one frozen self-supervised encoder, one fixed audio preprocessing policy, and two frozen task-specific heads**, does 4/8-bit weight-only compression produce conflicting *layer-level* sensitivity for (A) spoken sentence/prompt classification and (B) closed-set speaker identification? If so, can simple existing cost-matched multi-task allocation policies already handle the conflict?
+ 
+ ### Primary hypotheses
+diff --git a/docs/03_quantization_and_baselines.md b/docs/03_quantization_and_baselines.md
+index 94838b2..bd14a09 100644
+--- a/docs/03_quantization_and_baselines.md
++++ b/docs/03_quantization_and_baselines.md
+@@ -2,8 +2,8 @@
+ 
+ ## Fixed perturbation scheme (pilot)
+ - **Weight-only** post-training symmetric uniform quantization-dequantization. No activations quantized, no encoder training, no observer/calibration learning and no GPTQ optimization in the pilot.
+-- Quantize **only the `nn.Linear` weights inside each of the 12 Transformer encoder blocks**: Q/K/V projections, attention output projection, and feed-forward linear weights. Confirm actual WavLM module names; fail closed on partial coverage.
+-- Exclude conv frontend, feature projection, positional conv/bias, layer norms, embedding-related modules, all biases and both task probes; these remain baseline precision. This isolates block-level sensitivities but limits achievable whole-model compression.
++- Quantize **exactly the six allowlisted projection weights in each of the 12 Transformer encoder blocks** under [Q-001](amendments/Q001_SCOPE.md). Verify 72 eligible matrices and 12 excluded `attention.gru_rel_pos_linear.weight` matrices against the pinned WavLM implementation. Fail closed on a path, type, count, or shape mismatch.
++- Exclude the relative-position gate and every other non-allowlisted parameter, including conv frontend, feature projection, positional conv/bias, layer norms, embedding-related modules, all biases and both task probes; these remain baseline precision. This isolates block-level sensitivities but limits achievable whole-model compression.
+ - Per-output-row *contiguous* groups of 64 weights; groupwise symmetric affine scaling with **zero-point 0**. Levels for signed n-bit: `[-(2^(b-1)-1), ..., +(2^(b-1)-1)]`; scale = max(abs(group)) / qmax, with explicit zero-scale behavior. Deterministic nearest rounding and saturation. Report the unused most-negative signed code. Float16 scales by default.
+ - Test b = 4 and 8. Retain FP16/FP32 unquantized baseline. If group-size or reference precision changes, version the protocol and restart before outcome testing.
+ - For the primary diagnostic, reconstruct values into the original floating dtype for the standard PyTorch forward pass. It is **fake quantization**, not an actual fast int4/int8 kernel.
+@@ -18,7 +18,7 @@
+ ## Storage budget (do not pretend fake quant saves actual RAM)
+ For each eligible matrix/group, model packed data cost as `ceil(n_group_weights * b/8)` bytes + 2 bytes for FP16 scale, including padding overhead for last groups. Excluded parameters and probes are counted at their fixed baseline dtype. Save per-module bit cost and packed-layout spec. Either implement bit packing and assert serialized length agrees with model, or label it explicitly as **calculated packed bytes** rather than measured serialized bytes.
+ 
+-Build endpoint costs for uniform all-4 and all-8 in eligible transformer weights, with fixed parameters included. Define three *actual total byte* budgets as:
++Build endpoint costs for uniform all-4 and all-8 in eligible transformer weights, with fixed parameters included. Define three *total packed-storage byte* budgets, including all fixed reference-precision parameters, as:
+ `B(f) = total_bytes_4 + f*(total_bytes_8 - total_bytes_4)` for `f∈{0.25,0.50,0.75}`.
+ 
+ Configuration uses `{4,8}` per Transformer block. Enumerate all `2^L` bit assignments (L expected 12; enumeration is trivial), reject ones above B(f). Score policies only on permissible configs. Report achieved bytes and allow a <=0.5% tolerance between compared configurations; if not matched, disclose bytes and use Pareto plots, not a winner claim.

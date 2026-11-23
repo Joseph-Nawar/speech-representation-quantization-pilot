@@ -1,0 +1,347 @@
+{
+  "G0": "PASS",
+  "G0_artifact": {
+    "accepted": 1134,
+    "candidate_ids_sha256": "a44fdd8ede9aab7d4495a7eb966bdb6e4038ee505a760ca98b71af63f3c8b0bb",
+    "cells": 1134,
+    "file_sha256": "24c22663fcca5d8c82b63c2b3e5a92886baf057ebabca795705a74d74165b3eb",
+    "grid": [
+      63,
+      18
+    ],
+    "path": "runs/speech-quant-diagnostic-20261122-v3/g0/g0.json",
+    "rejected": 0,
+    "selected_grid_ids_sha256": "a44fdd8ede9aab7d4495a7eb966bdb6e4038ee505a760ca98b71af63f3c8b0bb",
+    "split_counts": {
+      "dev": 227,
+      "test": 227,
+      "train": 680
+    },
+    "split_manifest_sha256": "565f832b6b4a2d28643851f27e31219e24689f0e6944ad03daba67c6e6451b63",
+    "stage_sha256": "2c62915e2a4aa3f2d972267bd7d02b888424507613e2392e868019d29c886104"
+  },
+  "G1": "PASS",
+  "G1_artifact": {
+    "device": "mps",
+    "feature_cache_sha256": "92529044bb19fba16051586f7ae6097b483e1cd786f360588415557c4bff77f8",
+    "file_sha256": "4a7e3bd8f594b526be444584ec2fadb6ca647e2c1323dc346dba9e98bd80e7ae",
+    "metrics": {
+      "prompt": {
+        "candidate_C_dev_macro_f1": {
+          "0.01": 1.0,
+          "0.1": 1.0,
+          "1.0": 1.0,
+          "10.0": 1.0
+        },
+        "dev_class_support_max": 17,
+        "dev_class_support_min": 7,
+        "dev_macro_f1": 1.0,
+        "dev_samples": 227,
+        "development_prediction_sha256": "2ace4423ea3eaec390b0e972aed3d6ccf65f94a5bcf99bae11d48d02c7bde47c",
+        "head_scaler_array_sha256": "d6d2a352b1a526e7022b951ab1a705bd2c4e00537efe16fd0f1e14329bba6f09",
+        "improvement_margin": 0.9962174940898345,
+        "majority_macro_f1": 0.003782505910165485,
+        "probe_artifact_sha256": "a0d1b4f84a963f104a9e3e7ee6dd15d5f59485c24eae11d5973ee203d1245d5b",
+        "selected_C": 0.01,
+        "train_class_support_max": 44,
+        "train_class_support_min": 29,
+        "train_samples": 680
+      },
+      "speaker": {
+        "candidate_C_dev_macro_f1": {
+          "0.01": 0.7804736709498613,
+          "0.1": 0.8610664467807323,
+          "1.0": 0.8899528161432921,
+          "10.0": 0.9029535720011909
+        },
+        "dev_class_support_max": 7,
+        "dev_class_support_min": 3,
+        "dev_macro_f1": 0.9029535720011909,
+        "dev_samples": 227,
+        "development_prediction_sha256": "8f3b0e6d220542947e3eabba253899ed0df5d955d9538be1d4dba484d394f998",
+        "head_scaler_array_sha256": "e8da07fcfcbbe29a52d28abea66f418612950827148b74d78b66bf69d7e479a4",
+        "improvement_margin": 0.9025394933262426,
+        "majority_macro_f1": 0.00041407867494824016,
+        "probe_artifact_sha256": "b262e38287830645293883b693b03bd2cf35d3c78c3ac3d7e5070eda703281a5",
+        "selected_C": 10.0,
+        "train_class_support_max": 12,
+        "train_class_support_min": 8,
+        "train_samples": 680
+      }
+    },
+    "path": "runs/speech-quant-diagnostic-20261122-v3/g1/g1.json",
+    "precision": "float16",
+    "stage_sha256": "1dac1dced920e9c29015d402a6215359e243a6bdcc1c61e99a4f136b9b8fe786"
+  },
+  "G2": "FAIL",
+  "G2_artifact": {
+    "cost_model_only": {
+      "B025_bytes": 74632928,
+      "B050_bytes": 85249760,
+      "B075_bytes": 95866592,
+      "B4_bytes": 64016096,
+      "B8_bytes": 106483424,
+      "fixed_model_parameter_bytes": 18894560,
+      "per_block_uniform4_uniform8_bytes": [
+        {
+          "block": 1,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 2,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 3,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 4,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 5,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 6,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 7,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 8,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 9,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 10,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 11,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        },
+        {
+          "block": 12,
+          "uniform4": 3760128,
+          "uniform8": 7299072
+        }
+      ]
+    },
+    "dev_prediction_artifact_sha256": "b6c040045716fe9a5a9e1ac573527f72bf8e9c8946f550156b54b88d46ade47c",
+    "drops": {
+      "uniform4": {
+        "prompt": 0.0,
+        "speaker": 0.015432098765432056
+      },
+      "uniform8": {
+        "prompt": 0.0,
+        "speaker": 0.0
+      }
+    },
+    "file_sha256": "cb56020850a391d01bc6c7e86a45a27125b37f576a9f7bdc9229d747a74ab208",
+    "gate": {
+      "criteria": {
+        "uniform4_drop_at_least_minimum_on_any_task": false,
+        "uniform8_drop_at_most_maximum_on_each_task": true
+      },
+      "drops": {
+        "uniform4": {
+          "prompt": 0.0,
+          "speaker": 0.015432098765432056
+        },
+        "uniform8": {
+          "prompt": 0.0,
+          "speaker": 0.0
+        }
+      },
+      "pass": false,
+      "thresholds": {
+        "uniform4_min_drop_any_task": 0.03,
+        "uniform8_max_drop_each_task": 0.05
+      }
+    },
+    "metrics": {
+      "FP": {
+        "prompt": 1.0,
+        "speaker": 0.9029535720011909
+      },
+      "uniform4": {
+        "prompt": 1.0,
+        "speaker": 0.8875214732357588
+      },
+      "uniform8": {
+        "prompt": 1.0,
+        "speaker": 0.9029535720011909
+      }
+    },
+    "model_restoration": {
+      "eligible_weights_modified_only": true,
+      "full_fingerprint_equals_master": true,
+      "head_scaler_hashes_unchanged": {
+        "prompt": true,
+        "speaker": true
+      },
+      "restored_fp_feature_max_abs": 0.0
+    },
+    "path": "runs/speech-quant-diagnostic-20261122-v3/g2/g2.json",
+    "stage_sha256": "fc2d2ebca1f9d2b0f0cc4a69e9f8d81bd587dde6d94e54c0e45c1f4523b92862"
+  },
+  "G3": "NOT_ASSESSED",
+  "G4": "NOT_ASSESSED",
+  "G5": "OPEN",
+  "P0_P1_STATUS_preserved": true,
+  "P0_P1_STATUS_sha256": "2a041f946ff3ae7edf4d34a672210fec9949cfe89885426b7c005f8d09e7988f",
+  "P0_STATUS_V1_sha256": "1f632f4989840b6b8fbe63469679109e442fbd601aad9593b6133aec7061f2cf",
+  "P3_started": false,
+  "P4_test_lock_created": false,
+  "Q001": "ADOPTED",
+  "Q002": "ADOPTED",
+  "Q002_adopted_before_audio_or_empirical_p2_metrics": true,
+  "Q002_details": {
+    "amended_file_checksums": "runs/P2_Q002/Q002_amended_file_checksums.json",
+    "bootstrap_spec_sha256": "3e537fe0aebe21813c634d535e6e2760e1bcb8b3536569a513df94273ea52e05",
+    "bounded_mc_scenarios": 4,
+    "checksum_manifest_sha256": "e270691ad8ff968ee65276bc76837cfbb08fcd2ec9ebda0a93c42407983e2185",
+    "diff_sha256": "d9293361aed2c1caaf23a239363c3b3e181f3901edbd3508032df23ff3f3a285",
+    "exact_v2_to_v3_diff": "runs/P2_Q002/Q002_v2_to_v3.diff",
+    "focused_tests": 18,
+    "limitations": "Approximate method; synthetic coverage diagnostic limited to four classes.",
+    "perfect_63x18_replicates_exactly_one": 2000,
+    "status": "ADOPTED",
+    "synthetic_result_file_sha256": "5560e9903dd6e20d1ce16ab3a4884a4133969e80bcb71f3d2c6970df7c0ddcf6",
+    "synthetic_result_sha256": "982a5c03a2d68fd015fdfbdf4d2532258905e1d95234b3f9dcecc2bed231ecaa"
+  },
+  "artifact_sha256_index": {
+    "path": "reports/P2_ARTIFACT_SHA256.json",
+    "sha256": "053f4344ea49ba43d66ffd7f084b91ac4a7c59cd142c5a5e836bd08c006cf308"
+  },
+  "blocking_discrepancies": [],
+  "commits": {
+    "final_head": "e8e694b37fcae5b6b410ff9f824ae2e1d886f80c",
+    "implementation": "2920e8d3e896b6e45dbd0cc8d9f3702c36bd240e",
+    "manifests": "e8e694b37fcae5b6b410ff9f824ae2e1d886f80c"
+  },
+  "conclusion": "NO_GO_CURRENT_DESIGN",
+  "next_permitted_action": "Researcher review of bounded P2 NO-GO and scientific risks. Do not start P3 under this result.",
+  "outstanding_scientific_risks": [
+    "Q-002 multiplier bootstrap is approximate; the bounded coverage diagnostic used four classes and does not establish coverage for 18 prompt or 63 speaker classes.",
+    "The pinned mirror metadata matches candidate IDs, mic1 paths, normalized text, and duration screens, but mirror audio parity remains unverified; all P2 audio came from official VCTK.",
+    "Audio duplication checks are exact FLAC/decoded-PCM hashes. Mic2 near-duplicate channels are excluded by design; no general fuzzy acoustic threshold was specified.",
+    "FP prompt dev macro-F1 is 1.0 on this closed-set split; this is development-only and says nothing about unseen speakers/prompts or broader speech tasks.",
+    "Simulated dequantized weights support perturbation comparisons and calculated packed-byte accounting only; they establish neither deployment size nor inference acceleration."
+  ],
+  "parent_study_id": "speech-quant-diagnostic-20261122-v2",
+  "protocol_lock": "runs/speech-quant-diagnostic-20261122-v3/protocol_lock.json",
+  "protocol_version": 3,
+  "report": {
+    "path": "reports/P2_G0_G1_G2.md",
+    "sha256": "eab279d740a8196cb81a0ad2bfea69775fe924f81fb786138902e8aa2159669c"
+  },
+  "resources": {
+    "full_suite": {
+      "command": "/usr/bin/time -l env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q",
+      "log": "runs/P2_Q002/pytest-preaudio-final-resource.log",
+      "peak_rss_bytes": 524713984,
+      "process_real_seconds": 22.41,
+      "pytest_wall_seconds": 21.16,
+      "result": "57 passed; 1 pre-existing Torch attention mask dtype deprecation warning"
+    },
+    "g0": {
+      "actual_range_transfer_bytes": 281672216,
+      "combined_local_audio_bytes": 682390451,
+      "compressed_audio_payload_bytes": 281572496,
+      "decoded_pcm_bytes": 400813708,
+      "disk_bytes_consumed": 302952448,
+      "disk_free_after_bytes": 106211893248,
+      "disk_free_before_bytes": 106514845696,
+      "extracted_flac_bytes": 281576743,
+      "model_forwards": 0,
+      "peak_rss_bytes": 550518784,
+      "wall_seconds": 519.332
+    },
+    "g1": {
+      "minimum_disk_free_bytes": 106206957568,
+      "model_forwards": 911,
+      "mps_memory_is_reported_separately_from_rss": true,
+      "peak_rss_bytes": 770031616,
+      "sampled_peak_mps_driver_bytes": 1334493184,
+      "test_audio_model_forwards": 0,
+      "test_prediction_reads": 0,
+      "train_dev_audio_reads": 908,
+      "wall_seconds": 40.907
+    },
+    "g2": {
+      "minimum_disk_free_bytes": 106205474816,
+      "model_forwards": 459,
+      "mps_memory_is_reported_separately_from_rss": true,
+      "peak_rss_bytes": 966328320,
+      "sampled_peak_mps_driver_bytes": 1328267264,
+      "test_audio_model_forwards": 0,
+      "test_prediction_reads": 0,
+      "train_dev_audio_reads": 459,
+      "wall_seconds": 23.098
+    },
+    "host": {
+      "architecture": "arm64",
+      "chip": "Apple M5",
+      "cpu_cores": 10,
+      "cuda_available": false,
+      "environment_manifest": "runs/P2_Q002/env.json",
+      "environment_manifest_sha256": "4ff54614a53a3af73e81491e6f70c567441a21121b423fe20c99eb4d919178a7",
+      "hardware_model": "Mac17,3",
+      "macos_build": "25E246",
+      "mps_available": true,
+      "mps_built": true,
+      "os": "macOS-26.4-arm64-arm-64bit",
+      "packages": {
+        "PyYAML": "6.0.4",
+        "huggingface-hub": "2.4.0",
+        "librosa": null,
+        "numpy": "2.5.5",
+        "pyarrow": "26.0.1",
+        "pytest": "9.2.0",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "soundfile": "0.14.0",
+        "torch": "2.15.0",
+        "torchaudio": "2.11.1",
+        "transformers": "5.24.0"
+      },
+      "python": "3.12.15",
+      "ram_bytes": 17179869184,
+      "torch": "2.15.0"
+    },
+    "max_sampled_mps_driver_bytes": 1334493184
+  },
+  "stage": "P2",
+  "stop_reason": "G2 failed: uniform4 maximum absolute dev macro-F1 drop was 0.015432, below the predeclared 0.03 minimum; uniform8 gate passed.",
+  "study_id": "speech-quant-diagnostic-20261122-v3",
+  "test_audio_model_forwards": 0,
+  "test_isolation": {
+    "historical_P1_test_overlap_count": 0,
+    "sealed_test_audio_files": 227,
+    "sealed_test_directory_mode": "000",
+    "test_ids_in_model_input": 0
+  },
+  "test_outcome_metric_rows": 0,
+  "test_prediction_reads": 0,
+  "test_predictions_accessed": false
+}

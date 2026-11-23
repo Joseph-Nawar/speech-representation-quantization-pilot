@@ -1,0 +1,2 @@
+W1122 17:20:53.926000 30589 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+P0 PASS. 84 audited matrices, 72 eligible and 12 excluded gate weights. 1.828 seconds.

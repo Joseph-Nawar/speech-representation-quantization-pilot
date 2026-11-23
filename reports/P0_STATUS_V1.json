@@ -1,0 +1,407 @@
+{
+  "P0": {
+    "G0": "UNVERIFIED",
+    "attempted": true,
+    "audio_clips": 0,
+    "audit_unit_tests": "PASS",
+    "blocking_discrepancy": "A1",
+    "metadata_grid": "PASS",
+    "model_forwards": 0,
+    "probe_fits": 0,
+    "runtime_operators": "PASS",
+    "status": "BLOCKED",
+    "variants": 0
+  },
+  "P1": {
+    "attempted": false,
+    "audio_clips": 0,
+    "blocks": [],
+    "reason": "P0 eligibility amendment pending",
+    "status": "BLOCKED",
+    "test_reads": 0
+  },
+  "P2_P3_P4": {
+    "attempted": false
+  },
+  "audit_code_commit": "7f12c4b99c62dd57d5af2cae358edde378e55519",
+  "blocking_discrepancies": [
+    {
+      "amendment": "Explicitly allowlist the six named projections, exclude relative-position parameters and apply identical scope to intervention and bytes. Record the researcher decision and version the study before P1.",
+      "id": "A1",
+      "problem": "WavLM has a seventh in-block linear weight for the relative-position gate."
+    }
+  ],
+  "candidate_grid": {
+    "cells": 1134,
+    "decoded_audio_verified": false,
+    "duration_seconds_inclusive": [
+      1,
+      10
+    ],
+    "metadata_verified": true,
+    "mic": "mic1",
+    "prompts": 18,
+    "selection": "Complete biclique, descending clip count then speakers then prompts; unique winning prompt set",
+    "sha256": "40e06426c15179de44848609c68abfa83567a651097ff8a656c6f1c6c0c686ac",
+    "speakers": 63,
+    "split_created": false
+  },
+  "clarifications": [
+    {
+      "amendment": "Name signed delta and positive degradation separately, preserving \u00a704 loss direction and gate values.",
+      "blocking_for_p0": false,
+      "id": "A2",
+      "problem": "\u00a701 names both signs for delta and loss."
+    }
+  ],
+  "date": "2026-11-22",
+  "model": {
+    "additional_linear": {
+      "attention.gru_rel_pos_linear.weight": [
+        8,
+        64
+      ]
+    },
+    "block_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "card_linked_license": "CC BY-SA 3.0",
+    "checkpoint_bytes": 377617425,
+    "checkpoint_measured_sha256": null,
+    "checkpoint_prefix_bytes": 65536,
+    "checkpoint_prefix_sha256": "1a1eeb6734cbd6448cf10174e629df14274a9befbfa186e4fd90d66dffb7a7e2",
+    "checkpoint_published_lfs_sha256": "3bb273a6ace99408b50cfc81afdbb7ef2de02da2eab0234e18db608ce692fe51",
+    "checkpoint_tensor_metadata_sha256": "593ebc5661f334066e99f2f7a0429b789cb855dc4dbc4db9159534ce7ab1f8a1",
+    "id": "microsoft/wavlm-base-plus",
+    "interpretations": {
+      "seven_linear_including_gate": {
+        "by_baseline_dtype": {
+          "fp16": {
+            "eligible_baseline_bytes": 169881600,
+            "excluded_baseline_bytes": 18882272,
+            "uniform4_calculated_total_bytes": 64007072,
+            "uniform8_calculated_total_bytes": 106477472
+          },
+          "fp32": {
+            "eligible_baseline_bytes": 339763200,
+            "excluded_baseline_bytes": 37764544,
+            "uniform4_calculated_total_bytes": 82889344,
+            "uniform8_calculated_total_bytes": 125359744
+          }
+        },
+        "eligible_elements": 84940800,
+        "eligible_matrices": 84,
+        "excluded_elements": 9441136
+      },
+      "six_named": {
+        "by_baseline_dtype": {
+          "fp16": {
+            "eligible_baseline_bytes": 169869312,
+            "excluded_baseline_bytes": 18894560,
+            "uniform4_calculated_total_bytes": 64016096,
+            "uniform8_calculated_total_bytes": 106483424
+          },
+          "fp32": {
+            "eligible_baseline_bytes": 339738624,
+            "excluded_baseline_bytes": 37789120,
+            "uniform4_calculated_total_bytes": 82910656,
+            "uniform8_calculated_total_bytes": 125377984
+          }
+        },
+        "eligible_elements": 84934656,
+        "eligible_matrices": 72,
+        "excluded_elements": 9447280
+      }
+    },
+    "named_projection_shapes": {
+      "attention.k_proj.weight": [
+        768,
+        768
+      ],
+      "attention.out_proj.weight": [
+        768,
+        768
+      ],
+      "attention.q_proj.weight": [
+        768,
+        768
+      ],
+      "attention.v_proj.weight": [
+        768,
+        768
+      ],
+      "feed_forward.intermediate_dense.weight": [
+        3072,
+        768
+      ],
+      "feed_forward.output_dense.weight": [
+        768,
+        3072
+      ]
+    },
+    "processor_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "runtime_inventory_matches_serialization": true,
+    "serialized_float32_elements": 94381936,
+    "serialized_tensor_count": 248,
+    "status": "BLOCKED",
+    "transformers_wavlm_source_sha256": "0d3fb6abe51dc4c4f019ee0e5907f653eb602adc525f5638024068389ed18098",
+    "upstream_source_license": "MIT"
+  },
+  "protocol_version": 1,
+  "quantizer_config_source_sha256": "ce5e91f4f25e68d2ad9a1b91beb14720abffd08b58d3a2c6e38060c1f964b37f",
+  "resources": {
+    "arch": "arm64",
+    "audio_clips_processed": 0,
+    "chip": "Apple M5",
+    "cpu_cores": 10,
+    "cuda_available": false,
+    "disk_free_bytes": 107516342272,
+    "ffmpeg_available": true,
+    "full_corpus_downloaded": false,
+    "full_model_downloaded": false,
+    "hardware_model": "Mac17,3",
+    "macos_build": "25E246",
+    "model_forward_passes": 0,
+    "mps_available": true,
+    "mps_built": true,
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "packages": {
+      "PyYAML": "6.0.4",
+      "huggingface-hub": "2.4.0",
+      "librosa": null,
+      "numpy": "2.5.5",
+      "pyarrow": "26.0.1",
+      "pytest": "9.2.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "soundfile": "0.14.0",
+      "torch": "2.15.0",
+      "torchaudio": "2.11.1",
+      "transformers": "5.24.0"
+    },
+    "peak_rss_bytes": 495779840,
+    "python": "3.12.15",
+    "ram_bytes": 17179869184,
+    "raw_audio_download_bytes": 0,
+    "soundfile_libsndfile": "1.2.2",
+    "stage_lower_bound_seconds": 832,
+    "synthetic_ops": {
+      "cpu/float16": "PASS",
+      "cpu/float32": "PASS",
+      "mps/float16": "PASS",
+      "mps/float32": "PASS"
+    },
+    "torchaudio_import": "2.11.1",
+    "unified_memory_peak_bytes": null,
+    "wall_seconds": 7.24
+  },
+  "run_seeds_used": [],
+  "sha256": {
+    "ignored_local_evidence": {
+      "cache/p0-model/README.md": "d417fc16b08e2f66f0af6b371e47a5f9f1f596f6c1c593f1214d360c41d7a27e",
+      "cache/p0-model/config.json": "fea6df1c2700a3954fc07e70588aecc9055eeb28db2ff57151a2db0d19180ed4",
+      "cache/p0-model/hub.json": "475878f9f41ce2a8b6d937587ec20aacf6678e56ab0a4a98a4e5345cae5eae0e",
+      "cache/p0-model/preprocessor_config.json": "99272fe8ccfab114b68b478681ea47ee3a1ce62bb788cb92dd6e4f69fb1f1da2",
+      "cache/p0-model/upstream-LICENSE": "74295d561f60f770a4aa7525b71c0d119ec70422e9f5c601ee3c77e1b7822c91",
+      "cache/p0-source/candidate-grid-audit.json": "40e06426c15179de44848609c68abfa83567a651097ff8a656c6f1c6c0c686ac",
+      "cache/p0-source/kth/README.md": "99042d50c92c304e0142aab5860a93d61ee957525523f9d46376e90fd5ebf4a6",
+      "cache/p0-source/larry/README.md": "610b70a7f16f64c28fa7be31e008f438be692d2e27370ff0e36800b5ce9e2b4a",
+      "cache/p0-source/larry/provenance.json": "753faf59a9e6ed7592aa07a07b8292d33d431b60780aae98179f5b8cb5dfebc9",
+      "cache/p0-source/license.txt": "b34e17103bfb246f2549fc82a279e6ba28834e0cb42f76a92efc14b72e3a3723",
+      "cache/p0-source/mirror-ranges.json": "7f40f17dd08a2711503d16af491b7e8896edf9aa4a7151d4d07e534e5038f322",
+      "cache/p0-source/official-index.json": "ffced63b8cd55eb6c097269e274d285d5381d9e12a8a31b4c8a7d5897010e7ee",
+      "cache/p0-source/official-texts.json": "b8fdc209d03563c12cf7467f2288fcbf7c66c833e1f27453f548eaad72ee5c50",
+      "cache/p0-source/readme.txt": "ba814954324641403096c224e20061f80819d50dcde6b98dd253dc8c21395d44",
+      "runs/P0/env.json": "f39dca28d91a3144f40bac03b912e76ef68bbf45a4764c4b21716e7db3e7c43d",
+      "runs/P0/grid-audit-reproduction.log": "02f7f29ff882ed6e1b7e52f3ab9747e3157bd67db99adb8488930ca12dad16c2",
+      "runs/P0/grid-audit.log": "02f7f29ff882ed6e1b7e52f3ab9747e3157bd67db99adb8488930ca12dad16c2",
+      "runs/P0/handoff-check.log": "1bc0e80374e1748bd845c5dee3793139ce1bc71d91fe5033981374f238395d29",
+      "runs/P0/initial-mirror-ranges.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "runs/P0/mirror-ranges.log": "e193f8a3b794a17590d79daee1558f4ef7f9f1aa86ffff290859595a164c573a",
+      "runs/P0/model-crosscheck.log": "8a2271ca395f1e1b2e9bca964071337442fc4686a25328114a97dce500c88154",
+      "runs/P0/model-header-http.log": "1f28f53625552922fefbae441fd6b42aaa68c6892b77b70713d9bbe21166c70e",
+      "runs/P0/model-http-headers.log": "1f28f53625552922fefbae441fd6b42aaa68c6892b77b70713d9bbe21166c70e",
+      "runs/P0/model.json": "2f89f26eefe5883c50b43cc28d46e39cd40bb0fbcb832369f12fe3ead0fa6da4",
+      "runs/P0/model.log": "47ee910219dd8f566c733d42becac68bfc0969bf6b9b763599bd1f479d600b82",
+      "runs/P0/official-index.log": "a348a2caad46aa343f73afd119d6ff4e172e10f67a3fc5a50970ecb5437443e2",
+      "runs/P0/official-texts.log": "83b041bffe944b753a8495bac1105b2a804c673525721b96c06cd33a351ea247",
+      "runs/P0/pytest-final.log": "3f2ea59ea3ff3b1f8ed8689f38597c7b6868acf5bbab9f1e2bf4e322510ff5ce",
+      "runs/P0/pytest-project.log": "802abd67e3bd9a82e6a9cb95e4667ba221b260c82a55d958ac23e259c5378fec",
+      "runs/P0/pytest.log": "4ae8dc693513b68f321ee2c8fe9d26ee920d3cbb5d2584ad7d7b0ea91f94dad1",
+      "runs/P0/runtime.log": "62e4abb246f0e1dd559421800b897665b85910a28d50bea112d3a4443137a140"
+    },
+    "versioned": {
+      "AGENTS.md": "cd7ecdafb3e9ddc662a0bb000ff7a08a7f30fde9062a6984e2751f8d9e1359b2",
+      "configs/pilot.yaml": "ce5e91f4f25e68d2ad9a1b91beb14720abffd08b58d3a2c6e38060c1f964b37f",
+      "docs/01_protocol.md": "5ea681745bc6afe561dab7a1c28f13d0395c3727b9331391a9384c9530038c22",
+      "docs/02_data_and_model.md": "f62e49452a983ba054aa449c84dfdb0ea1734fa0278f541ec967ef6ba667f684",
+      "docs/03_quantization_and_baselines.md": "324ab2e84e3ff04399257af7ee613201e11594b73b54eaa6f1a419c524f1b257",
+      "docs/04_analysis_and_gates.md": "40598afcfc2f19f4e4af171070b78076d7e3674aa0e8aabde4d6c0357425cc03",
+      "docs/05_literature_and_novelty.md": "f4c777647c9cbb89970ccba3878a0f89db14fd94e7c4e6e70a203044bd2b55cb",
+      "docs/06_execution_and_artifacts.md": "efff27ea7c9cc794603f6e79c928c3468e6e36a94cce3c365aeca7623c8244bc",
+      "pytest.ini": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
+      "reports/P0_NOVELTY_MATRIX.md": "3a82b3cc56a011d969456d5fa8698cfe20aca5c00d256c46d8e92b0b6c243644",
+      "reports/P0_PREFLIGHT.md": "9366c9646bdb8b1319422cde1479d9688de2a0b715d3c40ff20db28f395d1934",
+      "requirements-p0-observed.txt": "eccf8afed9221af7727e79f47289617312b6eb664a1dcb7ee4b3ca5074547075",
+      "tests/test_p0_model_audit.py": "91d34b45a7118a17135f9d36828a095fae18d6a1c85446478345fa3c662ea437",
+      "tools/p0_env.py": "3bb6ec40f5b46d0c9ddd7d5396242bbabf862a7a74fe166add21621b048a8753",
+      "tools/p0_grid_audit.py": "5b43af5c435d2c548c506937b9724b23e3beaf251c6645a40a11740cc43ae0b6",
+      "tools/p0_model.py": "a7dae9e096a10db1a16781ff4b065a39f2b992f31fdd784eb95c6856797ccbb7",
+      "tools/p0_source_ranges.py": "15a3e25eb48e2f8c18ad7dc3c9e60208c7f299f95a680a3c77f38a45dc5e8f95"
+    }
+  },
+  "source": {
+    "kth-tmh/vctk": {
+      "license_card_labels": [
+        "Public Domain",
+        "CC BY 4.0"
+      ],
+      "revision": "bf27f6ca7ad62afe2212b7094ef1f198a81d8b66",
+      "scope": "Pinned card and repo listing; mic suffix in filepath and separate text ID; duration field absent"
+    },
+    "official": {
+      "archive_bytes": 11747302977,
+      "archive_measured_sha256": null,
+      "archive_published_md5_etag": "8a6ba2946b36fcbef0212cad601f4bfa",
+      "bitstream_id": "535f4286-e54c-4038-838c-a02285e32cb2",
+      "doi": "10.7488/ds/2645",
+      "index_range_bytes": 12977343,
+      "item_id": "30e7453c-9ea8-48b4-8e18-f96d0dc62928",
+      "license": "CC BY 4.0",
+      "mic1_recordings": 44455,
+      "mic2_recordings": 43873,
+      "release": "VCTK 0.92 September 2019",
+      "transcript_and_repeated_index_range_bytes": 17609547,
+      "transcript_region_sha256": "1a3a89f9a5b9e4968bce5145df2c0e2ff0e205bebc8c1c7bf4c26cd69822a73e",
+      "transcripts": 44583
+    },
+    "thelarryproject/vctk": {
+      "audio_parity": "UNVERIFIED",
+      "audited_shards": 22,
+      "duplicate_keys": 0,
+      "license": "CC BY 4.0",
+      "metadata_range_bytes": 2790546,
+      "mic1_rows": 44283,
+      "mic2_rows": 43873,
+      "official_only_recordings_lacking_transcript": 172,
+      "path_id_or_normalized_transcript_mismatches": 0,
+      "producer_revision": "69252e059c68b4d20ba1fbf41a834aaed8277368",
+      "revision": "0492fa00cf72afb16e753e95d0ec3439eebb07a6",
+      "rows": 88156
+    }
+  },
+  "status": "BLOCKED",
+  "study_id": "speech-quant-diagnostic-20261122-v1",
+  "technical_feasibility": {
+    "packed_byte_arithmetic": "PASS",
+    "probe": "UNVERIFIED",
+    "quantizer": "BLOCKED",
+    "weighted_model_forward": "UNVERIFIED"
+  },
+  "tested_commands": [
+    {
+      "command": "shasum -a 256 -c HANDOFF_MANIFEST_SHA256.txt",
+      "log": null,
+      "result": "14 files OK; commentary header line ignored"
+    },
+    {
+      "command": "python3.12 tools/check_package.py",
+      "log": "runs/P0/handoff-check.log",
+      "result": "PASS 14 required files"
+    },
+    {
+      "command": "uv venv --python python3.12 .venv && UV_CACHE_DIR=cache/uv uv pip install pyarrow torch torchaudio soundfile transformers scikit-learn pytest pyyaml scipy requests",
+      "log": null,
+      "result": "PASS"
+    },
+    {
+      "command": "hf download thelarryproject/vctk README.md provenance.json --type dataset --revision 0492fa00cf72afb16e753e95d0ec3439eebb07a6 --local-dir cache/p0-source/larry",
+      "log": null,
+      "result": "PASS"
+    },
+    {
+      "command": "hf download kth-tmh/vctk README.md --type dataset --revision bf27f6ca7ad62afe2212b7094ef1f198a81d8b66 --local-dir cache/p0-source/kth",
+      "log": null,
+      "result": "PASS"
+    },
+    {
+      "command": "/opt/homebrew/bin/python3.12 cache/p0-source/source_ranges.py official",
+      "log": "runs/P0/official-index.log",
+      "result": "PASS"
+    },
+    {
+      "command": "python3.12 cache/p0-source/source_ranges.py texts",
+      "log": "runs/P0/official-texts.log",
+      "result": "PASS"
+    },
+    {
+      "command": "cache/metadata-venv/bin/python cache/p0-source/source_ranges.py mirror",
+      "log": "runs/P0/mirror-ranges.log",
+      "result": "PASS"
+    },
+    {
+      "command": "python3.12 tools/p0_grid_audit.py",
+      "log": "runs/P0/grid-audit-reproduction.log",
+      "result": "PASS 63 \u00d7 18 metadata grid"
+    },
+    {
+      "command": "hf download microsoft/wavlm-base-plus config.json preprocessor_config.json README.md --revision 4c66d4806a428f2e922ccfa1a962776e232d487b --local-dir cache/p0-model",
+      "log": null,
+      "result": "PASS"
+    },
+    {
+      "command": "curl -fsSL --max-time 20 --max-filesize 200000 -r 0-65535 'https://huggingface.co/microsoft/wavlm-base-plus/resolve/4c66d4806a428f2e922ccfa1a962776e232d487b/pytorch_model.bin?sq_header=64k' -D runs/P0/model-header-http.log -o cache/p0-model/checkpoint-prefix.bin",
+      "log": "runs/P0/model-http-headers.log",
+      "result": "PASS HTTP 206, signed redirect headers redacted"
+    },
+    {
+      "command": "python3.12 tools/p0_model.py cache/p0-model/checkpoint-prefix.bin --out runs/P0/model.json",
+      "log": "runs/P0/model.log",
+      "result": "PASS inventory, BLOCKED eligibility"
+    },
+    {
+      "command": ".venv/bin/python tools/p0_env.py --out runs/P0/env.json",
+      "log": "runs/P0/runtime.log",
+      "result": "PASS basic ops and 84 meta-only block linears"
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "log": "runs/P0/pytest.log",
+      "result": "Initial FAIL dependency-cache collection"
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "log": "runs/P0/pytest-project.log",
+      "result": "Project-only FAIL two incorrect expected fixture values"
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "log": "runs/P0/pytest-final.log",
+      "result": "PASS 5 audit tests"
+    },
+    {
+      "command": "git remote -v",
+      "log": null,
+      "result": "PASS no configured remotes"
+    }
+  ],
+  "unavailable_hashes": {
+    "downloaded_checkpoint": null,
+    "frozen_grid": null,
+    "frozen_split": null,
+    "head_weights": null,
+    "quantizer_implementation": null
+  }
+}

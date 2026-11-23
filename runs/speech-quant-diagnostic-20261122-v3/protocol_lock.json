@@ -1,0 +1,69 @@
+{
+  "P0_P1_STATUS_sha256": "2a041f946ff3ae7edf4d34a672210fec9949cfe89885426b7c005f8d09e7988f",
+  "P0_STATUS_V1_sha256": "1f632f4989840b6b8fbe63469679109e442fbd601aad9593b6133aec7061f2cf",
+  "amendments": [
+    "Q-001",
+    "Q-002"
+  ],
+  "authorization": "User-approved P2 only; P3/P4 prohibited in this handoff.",
+  "data_manifest_sha256": {
+    "candidate_ids": "a44fdd8ede9aab7d4495a7eb966bdb6e4038ee505a760ca98b71af63f3c8b0bb",
+    "grid_csv": "0205a51892c59b3c4404f5adef9eaadfae2af0ca18393a7cb7a3772a26ba0e07",
+    "label_maps": "d61b363f6e9a305e9293838e7da53d433e0caa0d56264efbd03508839b829273",
+    "selected_grid_ids": "a44fdd8ede9aab7d4495a7eb966bdb6e4038ee505a760ca98b71af63f3c8b0bb",
+    "split_manifest": "565f832b6b4a2d28643851f27e31219e24689f0e6944ad03daba67c6e6451b63",
+    "splits_csv": "266bd4cc35245726be73e36b0ec099cd3d03be0c42aef8979989444291d4a0f1"
+  },
+  "final_git_head": "e8e694b37fcae5b6b410ff9f824ae2e1d886f80c",
+  "implementation_commit": "2920e8d3e896b6e45dbd0cc8d9f3702c36bd240e",
+  "manifest_commit": "e8e694b37fcae5b6b410ff9f824ae2e1d886f80c",
+  "model": {
+    "checkpoint_sha256": "3bb273a6ace99408b50cfc81afdbb7ef2de02da2eab0234e18db608ce692fe51",
+    "device": "mps",
+    "model_id": "microsoft/wavlm-base-plus",
+    "model_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "precision": "float16",
+    "processor_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b"
+  },
+  "parent_study_id": "speech-quant-diagnostic-20261122-v2",
+  "pilot_config_sha256": "aca3db95846516d1207e8b580acd171f7c403ef0166dc283ae494ac4b081f6e3",
+  "protocol_version": 3,
+  "quantizer": {
+    "bits": [
+      4,
+      8
+    ],
+    "does_not_claim_runtime_acceleration_or_serialized_deployment_size": true,
+    "eligible_matrices": 72,
+    "group_size": 64,
+    "kind": "symmetric_groupwise_weight_only_fake_quant",
+    "primary_budget_fraction": 0.5,
+    "scale_dtype": "float16"
+  },
+  "stage": "P2",
+  "stage_artifact_embedded_sha256": {
+    "G0": "2c62915e2a4aa3f2d972267bd7d02b888424507613e2392e868019d29c886104",
+    "G1": "1dac1dced920e9c29015d402a6215359e243a6bdcc1c61e99a4f136b9b8fe786",
+    "G2": "fc2d2ebca1f9d2b0f0cc4a69e9f8d81bd587dde6d94e54c0e45c1f4523b92862"
+  },
+  "statistics": {
+    "Q002": "ADOPTED",
+    "bootstrap_spec_sha256": "3e537fe0aebe21813c634d535e6e2760e1bcb8b3536569a513df94273ea52e05",
+    "specification": "positive Gamma(1,1) speaker and prompt factor weights; product weights; 2,000 repetitions; seed 20261124; percentile 95%; distinct named dev/test substreams",
+    "test_stream_generated_or_used": false
+  },
+  "stop_gate": "G2 failed; stop after P2. No P3 layer sensitivity, policy search, or test prediction stage.",
+  "study_id": "speech-quant-diagnostic-20261122-v3",
+  "test_isolation": {
+    "P4_test_lock_created": false,
+    "model_input_partitions": [
+      "train",
+      "dev"
+    ],
+    "sealed_audio_directory": "data/speech-quant-diagnostic-20261122-v3/sealed_test_audio",
+    "sealed_audio_mode": "000",
+    "test_model_forwards": 0,
+    "test_prediction_reads": 0
+  },
+  "working_tree_clean_at_freeze": true
+}

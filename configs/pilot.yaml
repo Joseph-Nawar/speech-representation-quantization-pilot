@@ -1,0 +1,94 @@
+# PRE-REGISTERED. Research changes require new study_id and documented amendment.
+study_id: speech-quant-diagnostic-20261122-v3
+protocol_version: 3
+amendment: Q-002
+amendments: [Q-001, Q-002]
+parent_study_id: speech-quant-diagnostic-20261122-v2
+prior_study_id: speech-quant-diagnostic-20261122-v2
+owner_review_required_before: [P2, P4]
+data:
+  corpus: vctk_0.92
+  official_url: https://datashare.ed.ac.uk/items/30e7453c-9ea8-48b4-8e18-f96d0dc62928/full
+  candidate_hf_mirrors: [thelarryproject/vctk, kth-tmh/vctk]
+  microphone: mic1
+  min_speakers: 40
+  max_speakers: 64
+  min_prompts: 16
+  max_prompts: 24
+  duration_seconds: [1.0, 10.0]
+  sample_rate_hz: 16000
+  split: {train: 0.60, dev: 0.20, test: 0.20}
+  split_seed: 20261122
+  train_min_per_speaker: 8
+  dev_min_per_speaker: 3
+  test_min_per_speaker: 3
+  train_min_per_prompt: 12
+  dev_min_per_prompt: 5
+  test_min_per_prompt: 5
+model:
+  model_id: microsoft/wavlm-base-plus
+  revision: 4c66d4806a428f2e922ccfa1a962776e232d487b
+  processor_revision: 4c66d4806a428f2e922ccfa1a962776e232d487b
+  expected_transformer_blocks: 12
+  reference_precision: fp16_or_documented_fp32_fallback
+  pooling: mask_aware_mean_of_last_four_hidden_layers
+  freeze_encoder: true
+probes:
+  kind: standard_scaler_multinomial_logistic_regression
+  C_grid: [0.01, 0.1, 1.0, 10.0]
+  macro_f1_min: 0.55
+  min_above_majority_macro_f1: 0.20
+  heads_train_only_on_full_precision: true
+quantization:
+  kind: symmetric_groupwise_weight_only_fake_quant
+  eligible:
+    - attention.q_proj.weight
+    - attention.k_proj.weight
+    - attention.v_proj.weight
+    - attention.out_proj.weight
+    - feed_forward.intermediate_dense.weight
+    - feed_forward.output_dense.weight
+  excluded_block_linear: attention.gru_rel_pos_linear.weight
+  group_size: 64
+  bits: [4, 8]
+  scale_dtype: float16
+  bias_layernorm_conv_excluded: true
+  budgets_fraction_between_uniform4_and_uniform8: [0.25, 0.50, 0.75]
+  primary_budget_fraction: 0.50
+  budget_cost_tolerance_percent: 0.5
+  random_policy_repetitions: 10
+  headroom_random_configs_per_budget: 20
+analysis:
+  metric: macro_f1
+  primary_loss: worst_task_normalized_headroom_loss
+  bootstrap_kind: positive_weight_crossed_factor_multiplier
+  bootstrap_factor_distribution: {name: gamma, shape: 1.0, scale: 1.0}
+  bootstrap_cell_weight: speaker_weight_times_prompt_weight
+  bootstrap_factor_normalization: mean_one_per_replicate
+  bootstrap_repetitions: 2000
+  bootstrap_seed: 20261124
+  confidence_level: 0.95
+  bootstrap_interval: percentile
+  bootstrap_streams: [dev, test]
+  bootstrap_paired_conditions_share_weights: true
+  bootstrap_spec_sha256: 3e537fe0aebe21813c634d535e6e2760e1bcb8b3536569a513df94273ea52e05
+gates:
+  G2_min_uniform4_drop_any_task: 0.03
+  G2_max_uniform8_drop_each_task: 0.05
+  G3_max_spearman: 0.35
+  G3_max_top4_overlap: 2
+  G3_min_layers_with_cross_task_drop_difference: 3
+  G3_min_cross_task_drop_difference: 0.03
+  G3_max_spearman_bootstrap_upper_CI: 0.70
+  G4_min_dev_headroom_gain: 0.02
+  G4_test_CI_lower_must_exceed: 0.0
+  G5_manual_novelty_inspection: true
+resources:
+  P1_max_audio_clips: 128
+  P1_max_selected_blocks: 4
+  P2_max_audio_cells: 1134
+  P2_max_audio_payload_bytes: 2147483648
+  P2_max_local_decoded_bytes: 4294967296
+  P2_min_free_disk_bytes: 5368709120
+  prohibit_full_corpus_download_without_owner_approval: true
+  stage_stop_after: P2

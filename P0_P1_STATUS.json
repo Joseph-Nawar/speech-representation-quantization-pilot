@@ -1,0 +1,448 @@
+{
+  "P0": {
+    "actual_weight_isolation_restoration": "PASS",
+    "budget_tolerance_percent": 0.5,
+    "inventory": {
+      "blocks": 12,
+      "eligible": 72,
+      "excluded_gates": 12,
+      "total_linears": 84
+    },
+    "measured_checkpoint_sha256": "3bb273a6ace99408b50cfc81afdbb7ef2de02da2eab0234e18db608ce692fe51",
+    "model_budget_estimates": {
+      "fp16": {
+        "all4_bytes": 64016096,
+        "all8_bytes": 106483424,
+        "fixed_bytes": 18894560,
+        "fractions": {
+          "0.25": {
+            "achieved_max_bytes": 74632928,
+            "ceiling_bytes": 74632928,
+            "feasible_mappings": 299,
+            "prior_seven_linear_ceiling": 74624672
+          },
+          "0.5": {
+            "achieved_max_bytes": 85249760,
+            "ceiling_bytes": 85249760,
+            "feasible_mappings": 2510,
+            "prior_seven_linear_ceiling": 85242272
+          },
+          "0.75": {
+            "achieved_max_bytes": 95866592,
+            "ceiling_bytes": 95866592,
+            "feasible_mappings": 4017,
+            "prior_seven_linear_ceiling": 95859872
+          }
+        },
+        "per_block_bytes": [
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ]
+        ],
+        "prior_seven_linear_all4": 64007072,
+        "prior_seven_linear_all8": 106477472
+      },
+      "fp32": {
+        "all4_bytes": 82910656,
+        "all8_bytes": 125377984,
+        "fixed_bytes": 37789120,
+        "fractions": {
+          "0.25": {
+            "achieved_max_bytes": 93527488,
+            "ceiling_bytes": 93527488,
+            "feasible_mappings": 299,
+            "prior_seven_linear_ceiling": 93506944
+          },
+          "0.5": {
+            "achieved_max_bytes": 104144320,
+            "ceiling_bytes": 104144320,
+            "feasible_mappings": 2510,
+            "prior_seven_linear_ceiling": 104124544
+          },
+          "0.75": {
+            "achieved_max_bytes": 114761152,
+            "ceiling_bytes": 114761152,
+            "feasible_mappings": 4017,
+            "prior_seven_linear_ceiling": 114742144
+          }
+        },
+        "per_block_bytes": [
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ],
+          [
+            3760128,
+            7299072
+          ]
+        ],
+        "prior_seven_linear_all4": 82889344,
+        "prior_seven_linear_all8": 125359744
+      }
+    },
+    "quantization_unit_tests": "PASS",
+    "resources": {
+      "audio_clips": 0,
+      "device": "cpu",
+      "model_forwards": 0,
+      "peak_rss_bytes": 1203257344,
+      "wall_seconds": 1.828
+    },
+    "scope_reconciliation": "PASS",
+    "status": "PASS"
+  },
+  "P1": {
+    "WavLM_forward": "PASS",
+    "attempted": true,
+    "audio_integrity": "PASS",
+    "authorized_blocks": [
+      1,
+      4,
+      8,
+      12
+    ],
+    "conditions": [
+      "block01-4bit",
+      "block01-8bit",
+      "block04-4bit",
+      "block04-8bit",
+      "block08-4bit",
+      "block08-8bit",
+      "block12-4bit",
+      "block12-8bit",
+      "reference"
+    ],
+    "data_metadata": "PASS",
+    "device": "mps",
+    "download_cap_bytes": 16777216,
+    "error": null,
+    "fixed_probe_numeric_bytes": 86080,
+    "max_audio_clips": 128,
+    "planned_clips": 12,
+    "planned_range_bytes": 3453180,
+    "quantized_conditions": 8,
+    "reference_precision": "float16",
+    "resources": {
+      "audio_clips": 12,
+      "downloaded_bytes": 3453180,
+      "memory_observed_mps_driver_bytes": 1321533440,
+      "minimum_disk_free_bytes": 106536034304,
+      "model_forwards": 128,
+      "peak_rss_bytes": 867762176,
+      "test_audio_reads": 0,
+      "wall_seconds": 41.997
+    },
+    "smoke_probe": "PASS",
+    "stage_authorization": "AUTHORIZED_AFTER_P0_PASS",
+    "status": "PASS"
+  },
+  "amendment": "Q-001",
+  "authorization": {
+    "P0": "Q-001 approved",
+    "P1": "bounded only after P0 acceptance",
+    "P2_P3_P4": "NOT_AUTHORIZED"
+  },
+  "blocking_discrepancies": [],
+  "candidate_grid": {
+    "cells": 1134,
+    "full_audio_and_split_lock": "UNVERIFIED",
+    "official_mirror_audit": "PASS",
+    "prompts": 18,
+    "sha256": "40e06426c15179de44848609c68abfa83567a651097ff8a656c6f1c6c0c686ac",
+    "speakers": 63
+  },
+  "code_commit": "be4fdc264fe961315dd0bf3a119e0d38cbd4a2cd",
+  "date": "2026-11-22",
+  "gates": {
+    "G0": "UNVERIFIED",
+    "G1_G2_G3_G4": "NOT_RUN",
+    "G5": "OPEN"
+  },
+  "hardware": {
+    "arch": "arm64",
+    "chip": "Apple M5",
+    "cpu_cores": 10,
+    "cuda_available": false,
+    "hardware_model": "Mac17,3",
+    "mps_available": true,
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "packages": {
+      "PyYAML": "6.0.4",
+      "huggingface-hub": "2.4.0",
+      "librosa": null,
+      "numpy": "2.5.5",
+      "pyarrow": "26.0.1",
+      "pytest": "9.2.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "soundfile": "0.14.0",
+      "torch": "2.15.0",
+      "torchaudio": "2.11.1",
+      "transformers": "5.24.0"
+    },
+    "python": "3.12.15",
+    "ram_bytes": 17179869184
+  },
+  "prior_preserved_in_commit": "4cf306f",
+  "prior_study_id": "speech-quant-diagnostic-20261122-v1",
+  "protocol_version": 2,
+  "provenance": {
+    "amendment": "Q-001",
+    "amendment_sha256": "1fa4ee8e2d9ff40d86429d2a85708422cdf3ca91c579a7d86f74f58f3ef04a2d",
+    "candidate_sha256": "40e06426c15179de44848609c68abfa83567a651097ff8a656c6f1c6c0c686ac",
+    "checkpoint_sha256": "3bb273a6ace99408b50cfc81afdbb7ef2de02da2eab0234e18db608ce692fe51",
+    "code_commit": "be4fdc264fe961315dd0bf3a119e0d38cbd4a2cd",
+    "config_sha256": "e7caee286965dc758ee0fca22b3bdd683910e4107fc060b7beedccd5aa301c9e",
+    "micro_plan_sha256": "96acdc2de333cbed9679062f9a6aa53e50d0b56a5d21c41123624593ca667e03",
+    "model_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "processor_revision": "4c66d4806a428f2e922ccfa1a962776e232d487b",
+    "protocol_version": 2,
+    "scope_sha256": "06f26cb2c13e07d9c31dfe99e9ae888760000e8f19c573e63de445ebecdd6dd1",
+    "software_sha256": "eccf8afed9221af7727e79f47289617312b6eb664a1dcb7ee4b3ca5074547075",
+    "study_id": "speech-quant-diagnostic-20261122-v2"
+  },
+  "scientific_risks": [
+    "G0 requires checking all selected recordings and the study split lock",
+    "G5 requires owner novelty review",
+    "Smoke probes do not qualify the frozen scientific probes or estimate their trade-off",
+    "Known speakers and prompts only",
+    "FP simulation and calculated bytes do not establish deployment memory or speed"
+  ],
+  "sha256": {
+    "fallback_download_scripts": {
+      "cache/p0-model/get_curl_parts.py": "733ad7f27175ef4d78ac82fba080a6ef7746246a4ca47ed09332a34342e8858c",
+      "cache/p0-model/get_lfs.py": "ad323b4afd6ea47ba5b3311337b4923e9c7c0616f5aff62442954479dfec41ef",
+      "cache/p0-model/get_lfs_parts.py": "1664b09be6e9673af69ae333a09400163dda7e693a72b858185982872e9403bb",
+      "cache/p0-model/get_ranges.py": "86cb5944ffab4b2ef71304bfa88c98353f4d88efa3d616c8be7ce3fa17e58c1e",
+      "cache/p0-model/get_small_ranges.py": "37af747bef51024c619fe4fc982befa4c43339d75123654dcdbe7ac5bc89e0d8",
+      "cache/p0-model/resume_parts.py": "4c26e8ae35628b4b46742a12d4fb6cd94ba60de1354d0440aec0c1fdf8621925"
+    },
+    "local_evidence": {
+      "runs/P0_Q001/amended-metadata.json": "1172bd37165cd328f126be1a376c04c99a434bd38bcf9a71999c128995890b5c",
+      "runs/P0_Q001/amendment-final-sha256.txt": "222b1d52c7a76c3581d8a7eeb8202f5a942be4791597a669711f86b74818b6f4",
+      "runs/P0_Q001/amendment-sha256.txt": "2e4df2de6f4168ae1d720292c6575f2ff9874095220a28c083e35885944f3598",
+      "runs/P0_Q001/checkpoint-curl-parts.log": "ab1df1956b16782ee699e031e109ee8d58bfcc37693e93fa8fc8382c9742e36e",
+      "runs/P0_Q001/checkpoint-curl.log": "d108bb2067c69a8435680fce9887d6df0d688bc8032944a3edcd2a18d2733520",
+      "runs/P0_Q001/checkpoint-download.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runs/P0_Q001/checkpoint-lfs-parts.log": "ef64588c0d8548a114282db965452867b180a86418e0cfbd48f1e5345c5f97d5",
+      "runs/P0_Q001/checkpoint-lfs.log": "0c7d835ebbfd467bb1433e1e3f2b49a91c11a40611bd427b438de1f940ef977f",
+      "runs/P0_Q001/checkpoint-ranges.log": "40e3bab681abeaafd2b2d14a67e475362ea68dbb25c326a5ac1253f628c9b977",
+      "runs/P0_Q001/checkpoint-resumable.log": "53b2ee40539cea2a34c4afcb5d76385832af0e05cda0d484da1938f42ba94db8",
+      "runs/P0_Q001/checkpoint-small-ranges.log": "c234e743dfaf6e0bec4509fd0043aa763f4bdacdbde4649092ff19d9376db396",
+      "runs/P0_Q001/micro-method.md": "151d580596eca365b40596007b1a11e925b9a5d82ac5b3744637e1c275a4ee00",
+      "runs/P0_Q001/micro-plan.json": "530d5bcb6c5f1db2b8244ffee20aaae1d329189116d930c4bd590a92172cc9c1",
+      "runs/P0_Q001/p0-first.log": "c55fb2a6de2581e490ce4cdfe81bf5f85c4305cd498218d9f82f3b66b8699d00",
+      "runs/P0_Q001/p0.json": "956052b2e0d0353ec6b7a4f489af3e8deea4f98ee76bb3286168c9b870196d4b",
+      "runs/P0_Q001/plan.log": "c60dc8c2a71d5ab9057f8f085221fa07b50bd3cac21e66c6a1194cbddc6d03ed",
+      "runs/P0_Q001/protocol-final.diff": "d0fcad9cffc514800b30ce3f8933013cfe11e7719fb5bd5aaefd2fef96bb4a71",
+      "runs/P0_Q001/protocol.diff": "56e921c734cfdd8747f0434c28d19ac0d25fde18f1cb620d99239f8873e2f2ec",
+      "runs/P0_Q001/pytest-data-green.log": "deb608ac382274d4cc8707fa574f1ebbef2f7559868e26ececbed69a23b3bc99",
+      "runs/P0_Q001/pytest-data-red.log": "01b2b4dc47366597ef45997ae2acc7f23a009c7f1c4fd78ce40dc1af99b2e1be",
+      "runs/P0_Q001/pytest-feature-red.log": "7f22e4d938f27bff4baa2a569cea8c2cf44a85358278a9f19277f4a46a2efd2c",
+      "runs/P0_Q001/pytest-final.log": "503a8951c1c561ba60fffb2c780a5eed90877f698ce50f2a5fed4fbf125fe35c",
+      "runs/P0_Q001/pytest-first-green.log": "13daabb406d7ef73bc2f876b0e509352a124615721817677274c0f45ca1a5382",
+      "runs/P0_Q001/pytest-frozen.log": "32e98cf7eb8e3217d44bfa27014307e93db9a56ea01172fcc131b1a0f27bc5c3",
+      "runs/P0_Q001/pytest-q001-acceptance.log": "7b09a8b981b3803a80d1eb3a39dd415971f4f0d3908a7ffee8d2470be07113f8",
+      "runs/P0_Q001/pytest-q001.log": "516255a0d99d3c79927612c69570af9b0416e88304506b0eb0af5399782eae7e",
+      "runs/P0_Q001/pytest-red.log": "f0214065417e463ca1ecf203accb9dd9bbf264266847e813a255b09e2cd162b8",
+      "runs/P0_Q001/pytest-synthetic-model.log": "6ba407bbd401eaf788e9513ff7eca1355b23d89e3c8af8f218f980d9686dec73",
+      "runs/P1_Q001/block01-4bit.npz": "13a5dedc4ebf12835eecfd62dfd95b65de2fe902b31f0b40e2f75533c5cd944a",
+      "runs/P1_Q001/block01-8bit.npz": "97b9a2314e50b46859d4126c8d9ee045636e1bd3c86d1cf42f5fdbbccd911e49",
+      "runs/P1_Q001/block04-4bit.npz": "7f2ee2b243edf85171bbb60b88ae17aad1fe71dd37d72dfdf48d60442d787b1b",
+      "runs/P1_Q001/block04-8bit.npz": "977fc96c450e582719579968ec8179bea23b4df9dc0bc4c925da11801c33b108",
+      "runs/P1_Q001/block08-4bit.npz": "f261cc6b88856ac432513d1b1e7951ebd3d5159b43b4c821a1a0b12abdaf7d7d",
+      "runs/P1_Q001/block08-8bit.npz": "7b534fae30dbadecb157fe6344a03f7f13ecd1e739717c3d9b11202cd6d01491",
+      "runs/P1_Q001/block12-4bit.npz": "377d2f432b27647be0a006617ba7cb301b1aedb10b80687641efcf1bf86588de",
+      "runs/P1_Q001/block12-8bit.npz": "2d04ff790a9a8a3a6c21da5059a1f49cb0a27a325765b4a3da8bfa998de97ab8",
+      "runs/P1_Q001/p1-first.log": "9326900648d468c25ccc3526d4637818ae858ead63e48549b0fa5dbb57f2c67d",
+      "runs/P1_Q001/p1.json": "3d57f94d81f73f34a5af73227ae11b86494d57b98db6622d00210dd9dc7d22b1",
+      "runs/P1_Q001/probe-prompt.npz": "e20042dc1d61ec4263a2bd745f1c67550fd320fb5733db1949de4e7ee406cb40",
+      "runs/P1_Q001/probe-speaker.npz": "2b989f03cecefede90689da0a58077e97e0941a102f9fc166b2866fddb21a767",
+      "runs/P1_Q001/pytest-after.log": "6c1e64eb11c11821473824df8de6fd598b391da3b27d14fed23b6e34af68d4de",
+      "runs/P1_Q001/reference.npz": "27166289a6ab074d7c2d1e0c3811fc6add0dbeffb9643c1c7659f266aa150173"
+    },
+    "versioned": {
+      "AGENTS.md": "cd7ecdafb3e9ddc662a0bb000ff7a08a7f30fde9062a6984e2751f8d9e1359b2",
+      "configs/pilot.yaml": "e7caee286965dc758ee0fca22b3bdd683910e4107fc060b7beedccd5aa301c9e",
+      "docs/01_protocol.md": "7bc0e423fba141659e22a4b0985535d5d97cfdd3f0c16c8cea564a63516a1416",
+      "docs/03_quantization_and_baselines.md": "d66e0308e76bade4a35fcfc3a162676f4128b7afe96aed0d42455d0e0ba45662",
+      "docs/04_analysis_and_gates.md": "40598afcfc2f19f4e4af171070b78076d7e3674aa0e8aabde4d6c0357425cc03",
+      "docs/amendments/Q001_SCOPE.md": "1fa4ee8e2d9ff40d86429d2a85708422cdf3ca91c579a7d86f74f58f3ef04a2d",
+      "reports/P0_NOVELTY_MATRIX.md": "3a82b3cc56a011d969456d5fa8698cfe20aca5c00d256c46d8e92b0b6c243644",
+      "reports/P0_PREFLIGHT.md": "9366c9646bdb8b1319422cde1479d9688de2a0b715d3c40ff20db28f395d1934",
+      "reports/P0_PREFLIGHT_Q001.md": "d30fad24f32220ccd6a41d272cf7f4de4eab07b66b2107289d0ac6f3027826ed",
+      "reports/P0_STATUS_V1.json": "1f632f4989840b6b8fbe63469679109e442fbd601aad9593b6133aec7061f2cf",
+      "reports/P1_SMOKE.md": "3360b4fcd95a7098bc0a475c5f9c8560e43ca6a0b7f5db8993f72dec06e50fdb",
+      "requirements-p0-observed.txt": "eccf8afed9221af7727e79f47289617312b6eb664a1dcb7ee4b3ca5074547075",
+      "sqpilot/__init__.py": "f257062b8d2a395257fc55e71e284936830e1237d561e065020b560eb45194e9",
+      "sqpilot/cli.py": "b4152bf05785a3b5c142ce6b21a706891a855cdc2e4ba894deaa6e6f95b88410",
+      "sqpilot/data.py": "a2dc75a600654a0623c07aaffa43fb04aeb9725e8a53c03d0846e26673f7444a",
+      "sqpilot/model.py": "e63f5da10d6bfac2750099744b4b3dec71c327a36971aaccc9b91d8ef596ff7c",
+      "sqpilot/quant.py": "620a0e7f181e1482932cfff7d879d8262eaebb7fba337c85b875ded92456f457",
+      "sqpilot/smoke.py": "13b110d62655b59fa5729fd4b11cb9aa41da000743a483bf051857ae1c0fc19c",
+      "tests/test_p0_model_audit.py": "91d34b45a7118a17135f9d36828a095fae18d6a1c85446478345fa3c662ea437",
+      "tests/test_p1_data.py": "7ca8a8ab4fd593f4565960e61cddac92c1a56ac1310c7cbed036281155205f59",
+      "tests/test_p1_features.py": "fcb432582dfeda720aa2369e59a3579326325d8139308b9869e5799ff7f8aa39",
+      "tests/test_q001.py": "c4b7ac1e2b22684ae343170b95450913b0730b4718a317a9d9a987098abc8be3"
+    }
+  },
+  "source": {
+    "kth-tmh/vctk": {
+      "license_card_labels": [
+        "Public Domain",
+        "CC BY 4.0"
+      ],
+      "revision": "bf27f6ca7ad62afe2212b7094ef1f198a81d8b66",
+      "scope": "Pinned card and repo listing; mic suffix in filepath and separate text ID; duration field absent"
+    },
+    "official": {
+      "archive_bytes": 11747302977,
+      "archive_measured_sha256": null,
+      "archive_published_md5_etag": "8a6ba2946b36fcbef0212cad601f4bfa",
+      "bitstream_id": "535f4286-e54c-4038-838c-a02285e32cb2",
+      "doi": "10.7488/ds/2645",
+      "index_range_bytes": 12977343,
+      "item_id": "30e7453c-9ea8-48b4-8e18-f96d0dc62928",
+      "license": "CC BY 4.0",
+      "mic1_recordings": 44455,
+      "mic2_recordings": 43873,
+      "release": "VCTK 0.92 September 2019",
+      "transcript_and_repeated_index_range_bytes": 17609547,
+      "transcript_region_sha256": "1a3a89f9a5b9e4968bce5145df2c0e2ff0e205bebc8c1c7bf4c26cd69822a73e",
+      "transcripts": 44583
+    },
+    "thelarryproject/vctk": {
+      "audio_parity": "UNVERIFIED",
+      "audited_shards": 22,
+      "duplicate_keys": 0,
+      "license": "CC BY 4.0",
+      "metadata_range_bytes": 2790546,
+      "mic1_rows": 44283,
+      "mic2_rows": 43873,
+      "official_only_recordings_lacking_transcript": 172,
+      "path_id_or_normalized_transcript_mismatches": 0,
+      "producer_revision": "69252e059c68b4d20ba1fbf41a834aaed8277368",
+      "revision": "0492fa00cf72afb16e753e95d0ec3439eebb07a6",
+      "rows": 88156
+    }
+  },
+  "status": "PASS",
+  "study_id": "speech-quant-diagnostic-20261122-v2",
+  "tested_commands": [
+    {
+      "command": "HF_HUB_DISABLE_IMPLICIT_TOKEN=1 hf download microsoft/wavlm-base-plus pytorch_model.bin --revision 4c66d4806a428f2e922ccfa1a962776e232d487b --local-dir cache/p0-model",
+      "log": "runs/P0_Q001/checkpoint-download.log",
+      "outcome": "Stalled; retained logs"
+    },
+    {
+      "command": "python3.12 cache/p0-model/resume_parts.py",
+      "log": "runs/P0_Q001/checkpoint-resumable.log",
+      "outcome": "Verified LFS object if complete"
+    },
+    {
+      "command": ".venv/bin/python -m sqpilot.cli plan --out runs/P0_Q001/micro-plan.json",
+      "log": "runs/P0_Q001/plan.log",
+      "outcome": "PASS 12 train/dev clips"
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "log": "runs/P0_Q001/pytest-frozen.log",
+      "outcome": "PASS 17 tests (includes original P0 tests)"
+    },
+    {
+      "command": ".venv/bin/python -m sqpilot.cli p0 --out runs/P0_Q001/p0.json",
+      "log": "runs/P0_Q001/p0-first.log",
+      "outcome": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m sqpilot.cli p1 --out runs/P1_Q001/p1.json",
+      "log": "runs/P1_Q001/p1-first.log",
+      "outcome": "PASS"
+    }
+  ]
+}

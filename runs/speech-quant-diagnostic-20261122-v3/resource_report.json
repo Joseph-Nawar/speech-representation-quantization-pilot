@@ -1,0 +1,87 @@
+{
+  "audio_scope": {
+    "actual_combined_local_audio_bytes": 682390451,
+    "actual_payload_bytes": 281572496,
+    "actual_verified_cells": 1134,
+    "authorized_cells": 1134,
+    "complete_corpus_archive_downloaded": false,
+    "local_decoded_extracted_cap_bytes": 4294967296,
+    "minimum_free_disk_bytes": 5368709120,
+    "transfer_cap_bytes": 2147483648
+  },
+  "full_test_suite": {
+    "command": "/usr/bin/time -l env PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .venv/bin/python -m pytest -q",
+    "log": "runs/P2_Q002/pytest-preaudio-final-resource.log",
+    "peak_rss_bytes": 524713984,
+    "process_real_seconds": 22.41,
+    "pytest_wall_seconds": 21.16,
+    "result": "57 passed; 1 pre-existing Torch attention mask dtype deprecation warning"
+  },
+  "g0": {
+    "actual_range_transfer_bytes": 281672216,
+    "combined_local_audio_bytes": 682390451,
+    "compressed_audio_payload_bytes": 281572496,
+    "decoded_pcm_bytes": 400813708,
+    "disk_bytes_consumed": 302952448,
+    "disk_free_after_bytes": 106211893248,
+    "disk_free_before_bytes": 106514845696,
+    "extracted_flac_bytes": 281576743,
+    "model_forwards": 0,
+    "peak_rss_bytes": 550518784,
+    "wall_seconds": 519.332
+  },
+  "g1": {
+    "minimum_disk_free_bytes": 106206957568,
+    "model_forwards": 911,
+    "mps_memory_is_reported_separately_from_rss": true,
+    "peak_rss_bytes": 770031616,
+    "sampled_peak_mps_driver_bytes": 1334493184,
+    "test_audio_model_forwards": 0,
+    "test_prediction_reads": 0,
+    "train_dev_audio_reads": 908,
+    "wall_seconds": 40.907
+  },
+  "g2": {
+    "minimum_disk_free_bytes": 106205474816,
+    "model_forwards": 459,
+    "mps_memory_is_reported_separately_from_rss": true,
+    "peak_rss_bytes": 966328320,
+    "sampled_peak_mps_driver_bytes": 1328267264,
+    "test_audio_model_forwards": 0,
+    "test_prediction_reads": 0,
+    "train_dev_audio_reads": 459,
+    "wall_seconds": 23.098
+  },
+  "host": {
+    "architecture": "arm64",
+    "chip": "Apple M5",
+    "cpu_cores": 10,
+    "cuda_available": false,
+    "environment_manifest": "runs/P2_Q002/env.json",
+    "environment_manifest_sha256": "4ff54614a53a3af73e81491e6f70c567441a21121b423fe20c99eb4d919178a7",
+    "hardware_model": "Mac17,3",
+    "macos_build": "25E246",
+    "mps_available": true,
+    "mps_built": true,
+    "os": "macOS-26.4-arm64-arm-64bit",
+    "packages": {
+      "PyYAML": "6.0.4",
+      "huggingface-hub": "2.4.0",
+      "librosa": null,
+      "numpy": "2.5.5",
+      "pyarrow": "26.0.1",
+      "pytest": "9.2.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "soundfile": "0.14.0",
+      "torch": "2.15.0",
+      "torchaudio": "2.11.1",
+      "transformers": "5.24.0"
+    },
+    "python": "3.12.15",
+    "ram_bytes": 17179869184,
+    "torch": "2.15.0"
+  },
+  "max_sampled_mps_driver_bytes": 1334493184,
+  "mps_memory_reporting": "sampled MPS driver allocation; kept separate from process RSS and not summed"
+}

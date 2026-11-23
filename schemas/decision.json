@@ -1,0 +1,17 @@
+{
+  "study_id": "speech-quant-diagnostic-20261122-v3",
+  "protocol_version": 3,
+  "amendments": ["Q-001", "Q-002"],
+  "stage": "P4",
+  "immutable_lock_sha256": "REQUIRED_ON_P4",
+  "verdict": "BLOCKED_INVALID",
+  "gates": {
+    "G0": {"status": "UNVERIFIED", "evidence": null},
+    "G1": {"status": "UNVERIFIED", "evidence": null},
+    "G2": {"status": "UNVERIFIED", "evidence": null},
+    "G3": {"status": "UNVERIFIED", "evidence": null},
+    "G4": {"status": "UNVERIFIED", "evidence": null},
+    "G5": {"status": "UNVERIFIED", "evidence": null}
+  },
+  "notes": "TEMPLATE ONLY. Do not represent as completed experiment."
+}

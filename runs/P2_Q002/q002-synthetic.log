@@ -1,0 +1,19 @@
+Q-002 synthetic diagnostic recorded: 4 scenarios; sha256=982a5c03a2d68fd015fdfbdf4d2532258905e1d95234b3f9dcecc2bed231ecaa
+       48.94 real        41.20 user         0.51 sys
+            69943296  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               15619  page reclaims
+                1142  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 405  voluntary context switches
+               72340  involuntary context switches
+        969918638985  instructions retired
+        154370814965  cycles elapsed
+            52101624  peak memory footprint

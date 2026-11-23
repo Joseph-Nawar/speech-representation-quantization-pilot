@@ -1,0 +1,16 @@
+{
+  "amendment": "Q-002; P2 execution authorization is recorded by the initiating user request",
+  "files": {
+    "README.md": "b215df4060be3019ad4adae93c187abffb58e6c1f2e530a8fbbaf70a1175401c",
+    "configs/pilot.yaml": "aca3db95846516d1207e8b580acd171f7c403ef0166dc283ae494ac4b081f6e3",
+    "docs/01_protocol.md": "2fb02975a8c1bcc4dc103e7bf0be5cd5b437744e4437bce977884abdaf886b89",
+    "docs/04_analysis_and_gates.md": "61c5bb9ac5aa208a03fd6c58131649575c3428256fa779e8ed573db4bbc03d2c",
+    "docs/amendments/Q001_SCOPE.md": "1fa4ee8e2d9ff40d86429d2a85708422cdf3ca91c579a7d86f74f58f3ef04a2d",
+    "docs/amendments/Q002_BOOTSTRAP.md": "14a3102a9258c6e43e320cf11da785d02ca389a7092b2672c08052a134843089",
+    "docs/archive/v2/SHA256SUMS": "6445f8425f81e444eca2df03d2a4818aedb521ba286d361b4211113d7ef600b9",
+    "runs/P2_Q002/Q002_v2_to_v3.diff": "d9293361aed2c1caaf23a239363c3b3e181f3901edbd3508032df23ff3f3a285",
+    "schemas/decision.json": "fbbdcee7f760816334bdf1e8ffb60114c69ada0fe388683543c736409867f5d3"
+  },
+  "parent_protocol": "v2",
+  "study_id": "speech-quant-diagnostic-20261122-v3"
+}

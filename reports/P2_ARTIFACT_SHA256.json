@@ -1,0 +1,248 @@
+{
+  "entries": [
+    {
+      "bytes": 3681,
+      "path": "README.md",
+      "sha256": "b215df4060be3019ad4adae93c187abffb58e6c1f2e530a8fbbaf70a1175401c"
+    },
+    {
+      "bytes": 2566,
+      "path": "AGENTS.md",
+      "sha256": "cd7ecdafb3e9ddc662a0bb000ff7a08a7f30fde9062a6984e2751f8d9e1359b2"
+    },
+    {
+      "bytes": 3345,
+      "path": "configs/pilot.yaml",
+      "sha256": "aca3db95846516d1207e8b580acd171f7c403ef0166dc283ae494ac4b081f6e3"
+    },
+    {
+      "bytes": 5651,
+      "path": "docs/01_protocol.md",
+      "sha256": "2fb02975a8c1bcc4dc103e7bf0be5cd5b437744e4437bce977884abdaf886b89"
+    },
+    {
+      "bytes": 6592,
+      "path": "docs/02_data_and_model.md",
+      "sha256": "f62e49452a983ba054aa449c84dfdb0ea1734fa0278f541ec967ef6ba667f684"
+    },
+    {
+      "bytes": 6075,
+      "path": "docs/03_quantization_and_baselines.md",
+      "sha256": "d66e0308e76bade4a35fcfc3a162676f4128b7afe96aed0d42455d0e0ba45662"
+    },
+    {
+      "bytes": 7916,
+      "path": "docs/04_analysis_and_gates.md",
+      "sha256": "61c5bb9ac5aa208a03fd6c58131649575c3428256fa779e8ed573db4bbc03d2c"
+    },
+    {
+      "bytes": 3418,
+      "path": "docs/05_literature_and_novelty.md",
+      "sha256": "f4c777647c9cbb89970ccba3878a0f89db14fd94e7c4e6e70a203044bd2b55cb"
+    },
+    {
+      "bytes": 4995,
+      "path": "docs/06_execution_and_artifacts.md",
+      "sha256": "efff27ea7c9cc794603f6e79c928c3468e6e36a94cce3c365aeca7623c8244bc"
+    },
+    {
+      "bytes": 7056,
+      "path": "docs/amendments/Q001_SCOPE.md",
+      "sha256": "1fa4ee8e2d9ff40d86429d2a85708422cdf3ca91c579a7d86f74f58f3ef04a2d"
+    },
+    {
+      "bytes": 7723,
+      "path": "docs/amendments/Q002_BOOTSTRAP.md",
+      "sha256": "14a3102a9258c6e43e320cf11da785d02ca389a7092b2672c08052a134843089"
+    },
+    {
+      "bytes": 531,
+      "path": "docs/archive/v2/SHA256SUMS",
+      "sha256": "6445f8425f81e444eca2df03d2a4818aedb521ba286d361b4211113d7ef600b9"
+    },
+    {
+      "bytes": 18108,
+      "path": "P0_P1_STATUS.json",
+      "sha256": "2a041f946ff3ae7edf4d34a672210fec9949cfe89885426b7c005f8d09e7988f"
+    },
+    {
+      "bytes": 16578,
+      "path": "reports/P0_STATUS_V1.json",
+      "sha256": "1f632f4989840b6b8fbe63469679109e442fbd601aad9593b6133aec7061f2cf"
+    },
+    {
+      "bytes": 8815,
+      "path": "runs/P2_Q002/env.json",
+      "sha256": "4ff54614a53a3af73e81491e6f70c567441a21121b423fe20c99eb4d919178a7"
+    },
+    {
+      "bytes": 3516,
+      "path": "runs/P2_Q002/q002-synthetic.json",
+      "sha256": "5560e9903dd6e20d1ce16ab3a4884a4133969e80bcb71f3d2c6970df7c0ddcf6"
+    },
+    {
+      "bytes": 899,
+      "path": "runs/P2_Q002/q002-synthetic.log",
+      "sha256": "53c602669d18d0bd2e47f48273e313e5f57b1b635a099c864facd7a0e36b12f3"
+    },
+    {
+      "bytes": 7015,
+      "path": "runs/P2_Q002/Q002_v2_to_v3.diff",
+      "sha256": "d9293361aed2c1caaf23a239363c3b3e181f3901edbd3508032df23ff3f3a285"
+    },
+    {
+      "bytes": 1094,
+      "path": "runs/P2_Q002/Q002_amended_file_checksums.json",
+      "sha256": "e270691ad8ff968ee65276bc76837cfbb08fcd2ec9ebda0a93c42407983e2185"
+    },
+    {
+      "bytes": 3275,
+      "path": "runs/P2_Q002/pytest-q002-preaudio-final.log",
+      "sha256": "e71c90cf3ab11faa3a01852a20822d9882cad337a831a7a0a6baaa1c8b0f5a57"
+    },
+    {
+      "bytes": 1398,
+      "path": "runs/P2_Q002/pytest-preaudio-final-resource.log",
+      "sha256": "3114ca2a9bd8e1757e0f582c6a2973536dd48276898c62fc0791a51b7160cede"
+    },
+    {
+      "bytes": 568,
+      "path": "runs/P2_Q002/p2-cli-help.log",
+      "sha256": "6994f14707ad9641842c07c45da86bb49ff3dc9fe5dc239a43d7b43320479191"
+    },
+    {
+      "bytes": 266510,
+      "path": "manifests/v3/grid.csv",
+      "sha256": "0205a51892c59b3c4404f5adef9eaadfae2af0ca18393a7cb7a3772a26ba0e07"
+    },
+    {
+      "bytes": 179616,
+      "path": "manifests/v3/splits.csv",
+      "sha256": "266bd4cc35245726be73e36b0ec099cd3d03be0c42aef8979989444291d4a0f1"
+    },
+    {
+      "bytes": 635,
+      "path": "manifests/v3/label_maps.json",
+      "sha256": "d61b363f6e9a305e9293838e7da53d433e0caa0d56264efbd03508839b829273"
+    },
+    {
+      "bytes": 8495,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g0/g0.json",
+      "sha256": "24c22663fcca5d8c82b63c2b3e5a92886baf057ebabca795705a74d74165b3eb"
+    },
+    {
+      "bytes": 690214,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g0/audio_integrity.json",
+      "sha256": "5d57eab3a10377a4278fe13debfd2db9a1b5847eb8c6a8997d684973231c5fac"
+    },
+    {
+      "bytes": 54697,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g0/ids_and_hashes.json",
+      "sha256": "7ed6539819485f85c631f1542a5d3ccd2340135510d9dae9436a90d4b907e938"
+    },
+    {
+      "bytes": 281518,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g0/split_manifest.json",
+      "sha256": "36d718606d474883701924685bc4f247b2c413477a56d04096b473e4bdd18493"
+    },
+    {
+      "bytes": 344962,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g0/source_plan.json",
+      "sha256": "42e6f9c44dc7e9b0b8c0f408c3202358fb7f16020927391049e638282c75f564"
+    },
+    {
+      "bytes": 6537,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g1/g1.json",
+      "sha256": "4a7e3bd8f594b526be444584ec2fadb6ca647e2c1323dc346dba9e98bd80e7ae"
+    },
+    {
+      "bytes": 2834976,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g1/features_train_dev_fp16.npz",
+      "sha256": "92529044bb19fba16051586f7ae6097b483e1cd786f360588415557c4bff77f8"
+    },
+    {
+      "bytes": 25796,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g1/dev_predictions.npz",
+      "sha256": "89812dfbec264f8ce7b1e7dcc260470c4bfa716f4d69aa0f1ef45e725ee74310"
+    },
+    {
+      "bytes": 408504,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g1/heads/speaker.npz",
+      "sha256": "b262e38287830645293883b693b03bd2cf35d3c78c3ac3d7e5070eda703281a5"
+    },
+    {
+      "bytes": 130872,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g1/heads/prompt.npz",
+      "sha256": "a0d1b4f84a963f104a9e3e7ee6dd15d5f59485c24eae11d5973ee203d1245d5b"
+    },
+    {
+      "bytes": 26682,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g2/g2.json",
+      "sha256": "cb56020850a391d01bc6c7e86a45a27125b37f576a9f7bdc9229d747a74ab208"
+    },
+    {
+      "bytes": 39612,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g2/dev_predictions.npz",
+      "sha256": "b6c040045716fe9a5a9e1ac573527f72bf8e9c8946f550156b54b88d46ade47c"
+    },
+    {
+      "bytes": 710656,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g2/features_uniform4_dev.npz",
+      "sha256": "e332805db56c0763a6207af9e4a2458e23128609bbaae157110bef2796a5e0f9"
+    },
+    {
+      "bytes": 710656,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/g2/features_uniform8_dev.npz",
+      "sha256": "7eb11a595d0c7c0f7df5ccea11731ed8a6cf3c7dd0ac1909d73f2e5fcc046cd4"
+    },
+    {
+      "bytes": 5490,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/logs/g0.log",
+      "sha256": "7ed5d7d64196404a583932724b46973982b3204669c9807c0be6c845c669f3ce"
+    },
+    {
+      "bytes": 1140,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/logs/g1.log",
+      "sha256": "0388f3bb41182d3056061e246628749270d9ad712f679f6031e0dc8ff7838317"
+    },
+    {
+      "bytes": 1448,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/logs/g2.log",
+      "sha256": "838e195bc7b34b437f97a2e47f49f65b0a2c9a96376ddf1a1c96749ecfab0d07"
+    },
+    {
+      "bytes": 3083,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/protocol_lock.json",
+      "sha256": "6189fce82fd2734dcf2c6506793c17d014d8c05adbe5a6b995ee31257c5fe6f9"
+    },
+    {
+      "bytes": 2908,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/resource_report.json",
+      "sha256": "b6bf63fcc54aae351fc6bef57c5e1336b6598fd3996a3d4b54cb3c22a40a748d"
+    },
+    {
+      "bytes": 15608,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/qa_summary.json",
+      "sha256": "dcfcd0bbc24bd8146e5da905de0f55e9ab7df87735d22e0fa1c425c259e59faf"
+    },
+    {
+      "bytes": 7348,
+      "path": "runs/speech-quant-diagnostic-20261122-v3/dev_metrics.json",
+      "sha256": "75f2da654c74675eb5b2946c9a1c7bc25efea1590e73e01fc62ef2f996903e5b"
+    },
+    {
+      "bytes": 13015,
+      "path": "reports/P2_G0_G1_G2.md",
+      "sha256": "eab279d740a8196cb81a0ad2bfea69775fe924f81fb786138902e8aa2159669c"
+    }
+  ],
+  "excluded": [
+    "raw audio",
+    "sealed test predictions",
+    "credentials/secrets",
+    "this index (self-reference)",
+    "P2_STATUS.json (self-reference excluded)"
+  ],
+  "protocol_version": 3,
+  "study_id": "speech-quant-diagnostic-20261122-v3"
+}
